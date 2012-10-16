@@ -1,13 +1,13 @@
 <?php defined('_JEXEC') or die;
 /* =====================================================================
-Template:	OneWeb for Joomla 2.5						            
-Author: 	Seth Warburton - Internet Inspired! - @nternetinspired 				            
-Version: 	2.0 											             
-Created: 	May 2012                                                    
-Copyright:	Seth Warburton - (C) 2012 - All rights reserved		
-License:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html							             
+Template:	OneWeb for Joomla 2.5
+Author: 	Seth Warburton - Internet Inspired! - @nternetinspired
+Version: 	2.0
+Created: 	May 2012
+Copyright:	Seth Warburton - (C) 2012 - All rights reserved
+License:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 Sources:	http://html5boilerplate.com/
-			http://construct-framework.com/					
+			http://construct-framework.com/
 /* ===================================================================== */
 
 // Define shortcuts for template parameters
@@ -23,9 +23,9 @@ $verification			= $this->params->get('verification');
 $googleWebFonts			= $this->params->get('googleWebFonts');
 
 // Calculate the number of modules published in a positon 
-$aboveModules = ($this->countModules('above1')?1:0)+ ($this->countModules('above2')?1:0)+ ($this->countModules('above3')?1:0)+ ($this->countModules('above4')?1:0); 
-$bottomModules = ($this->countModules('bottom1')?1:0)+ ($this->countModules('bottom2')?1:0)+ ($this->countModules('bottom3')?1:0)+ ($this->countModules('bottom4')?1:0)+ ($this->countModules('bottom5')?1:0)+ ($this->countModules('bottom6')?1:0); 
-$footerModules = ($this->countModules('footer1')?1:0)+ ($this->countModules('footer2')?1:0)+ ($this->countModules('footer3')?1:0)+ ($this->countModules('footer4')?1:0); 
+$aboveModules = ($this->countModules('above1')?1:0)+ ($this->countModules('above2')?1:0)+ ($this->countModules('above3')?1:0)+ ($this->countModules('above4')?1:0);
+$bottomModules = ($this->countModules('bottom1')?1:0)+ ($this->countModules('bottom2')?1:0)+ ($this->countModules('bottom3')?1:0)+ ($this->countModules('bottom4')?1:0)+ ($this->countModules('bottom5')?1:0)+ ($this->countModules('bottom6')?1:0);
+$footerModules = ($this->countModules('footer1')?1:0)+ ($this->countModules('footer2')?1:0)+ ($this->countModules('footer3')?1:0)+ ($this->countModules('footer4')?1:0);
 
 #-----------------------------See if we are on the homepage-----------------------------#
 // from Anthony Olsen of Joomla Bamboo, http://www.joomlabamboo.com
@@ -72,11 +72,11 @@ if ($jQuery) {
 }
 // Site icons: http://mathiasbynens.be/notes/touch-icons 
 // For third-generation iPad with high-resolution Retina display:
-$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="144x144" href="'.$template.'/images/large/apple-touch-icon-144x144-precomposed.png">');
+$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="144x144" href="'.$template.'/images/large/apple-touch-icon.png">');
 //For iPhone with high-resolution Retina display:
-$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="114x114" href="'.$template.'/images/large/apple-touch-icon-114x114-precomposed.png">');
+$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="114x114" href="'.$template.'/images/large/apple-touch-icon.png">');
 // For first- and second-generation iPad:
-$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="72x72" href="'.$template.'/images/medium/apple-touch-icon-72x72-precomposed.png">');
+$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="72x72" href="'.$template.'/images/medium/apple-touch-icon.png">');
 // For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
 $doc->addCustomTag('<link rel="apple-touch-icon-precomposed" href="'.$template.'/images/small/apple-touch-icon-precomposed.png">');
 
