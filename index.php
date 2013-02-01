@@ -1,19 +1,19 @@
 <?php defined('_JEXEC') or die;
 /* =====================================================================
-Template:	OneWeb for Joomla 2.5						            
-Author: 	Seth Warburton - Internet Inspired! - @nternetinspired 				            
-Version: 	2.0 											             
-Created: 	June 2012                                                    
-Copyright:	Seth Warburton - (C) 2012 - All rights reserved		
-Licenses:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html DBAD License http://philsturgeon.co.uk/code/dbad-license							             
-Sources:	http://html5boilerplate.com/ http://construct-framework.com/					
+Template:	OneWeb for Joomla 2.5
+Author: 	Seth Warburton - Internet Inspired! - @nternetinspired
+Version: 	2.0
+Created: 	June 2012
+Copyright:	Seth Warburton - (C) 2012 - All rights reserved
+Licenses:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html DBAD License http://philsturgeon.co.uk/code/dbad-license
+Sources:	http://gangnamboilerplate.com/ http://construct-framework.com/
 /* ===================================================================== */
 
 // Load template logic
-include_once JPATH_THEMES . '/' . $this->template . '/logic.php';  
+include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
 ?>
 <!doctype html>
-<!-- HTML5 Boilerplate -->
+<!-- gangnam Boilerplate -->
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -30,51 +30,51 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
   <a id="mobileMenu" href="#menu" title="Jump to navigation">Menu</a>
 </div>
 <div id="logoRow" class="row clearfix">
-	<a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename'));?>">        		
+	<a href="<?php echo $this->baseurl ?>/" title="<?php echo htmlspecialchars($app->getCfg('sitename'));?>">
         <header id="logo"><?php echo htmlspecialchars($app->getCfg('sitename'));?></header>
-    </a>                     	
+    </a>
 </div>
 <div id="container">
 	<?php if($this->countModules('banner')) : ?>
-    <div id="bannerRow" class="row clearfix">           
+    <div id="bannerRow" class="row clearfix">
         <header role="banner" id="banner">
-            <jdoc:include type="modules" name="banner" style="html5" headerLevel="4"/>
-        </header>	
+            <jdoc:include type="modules" name="banner" style="gangnam" headerLevel="4"/>
+        </header>
     </div>
     <?php endif; ?>
     <?php if ($aboveModules > 0) : ?>
-	<div id="aboveRow" class="row clearfix">   
+	<div id="aboveRow" class="row clearfix">
 		<?php if($this->countModules('above1')) : ?>
-        <div id="above1"> 
-                <jdoc:include type="modules" name="above1" style="html5" headerLevel="4"/>
+        <div id="above1">
+                <jdoc:include type="modules" name="above1" style="gangnam" headerLevel="4"/>
         </div>
-        <?php endif; ?>     
+        <?php endif; ?>
         <?php if($this->countModules('above2')) : ?>
         <div id="above2">
-                <jdoc:include type="modules" name="above2" style="html5" headerLevel="4"/>
+                <jdoc:include type="modules" name="above2" style="gangnam" headerLevel="4"/>
         </div>
-        <?php endif; ?>                       
+        <?php endif; ?>
         <?php if($this->countModules('above3')) : ?>
         <div id="above3">
-                <jdoc:include type="modules" name="above3" style="html5" headerLevel="4"/>
+                <jdoc:include type="modules" name="above3" style="gangnam" headerLevel="4"/>
         </div>
-        <?php endif; ?>                    
+        <?php endif; ?>
         <?php if($this->countModules('above4')) : ?>
         <div id="above4">
-                <jdoc:include type="modules" name="above4" style="html5" headerLevel="4"/>
+                <jdoc:include type="modules" name="above4" style="gangnam" headerLevel="4"/>
         </div>
-        <?php endif; ?>  
+        <?php endif; ?>
         </div>
 	<?php endif; ?>
     <?php if($this->countModules('breadcrumbs')) : ?>
-    <div id="breadcrumbRow" class="row clearfix">          
+    <div id="breadcrumbRow" class="row clearfix">
         <nav id="breadcrumbs" role="navigation">
-            <jdoc:include type="modules" name="breadcrumbs" style="html5" headerLevel="4"/>
+            <jdoc:include type="modules" name="breadcrumbs" style="gangnam" headerLevel="4"/>
         </nav>
     </div>
     <?php endif; ?>
     <?php if($siteHome == 'sub' or ($frontpage == 0)) : ?>
-    <div id="mainRow" class="row clearfix">                                     
+    <div id="mainRow" class="row clearfix">
         <?php if($this->countModules('left') or $this->countModules('search')) : ?>
         <div id="main" role="main" class="mainLeft last clearfix">
             <jdoc:include type="message" />
@@ -82,88 +82,88 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
         </div>
         <aside id="sidebar" class="clearfix" role="complementary">
 		  <?php if($this->countModules('left')) : ?>
-          <div id="left" class="clearfix">         
-                  <jdoc:include type="modules" name="left" style="html5"/>
+          <div id="left" class="clearfix">
+                  <jdoc:include type="modules" name="left" style="gangnam"/>
           </div>
           <?php endif; ?>
           <?php if($this->countModules('search')) : ?>
             <div id="search" role="search">
-                  <jdoc:include type="modules" name="search" style="html5" />
+                  <jdoc:include type="modules" name="search" style="gangnam" />
             </div>
           <?php endif; ?>
-        </aside>  
-        <?php else : ?> 
+        </aside>
+        <?php else : ?>
         <div id="main" role="main" class="main last clearfix">
         <jdoc:include type="message" />
         <jdoc:include type="component" />
-        </div>   
-        <?php endif; ?>                 			
+        </div>
+        <?php endif; ?>
     </div>
     <?php endif; ?>
     <nav id="menu" role="navigation" class="row clearfix"> <!-- main nav is here for usability and SEO reasons -->
-    	<jdoc:include type="modules" name="menu" style="html5" />
-    </nav> 
+    	<jdoc:include type="modules" name="menu" style="gangnam" />
+    </nav>
     <?php if ($bottomModules > 0) : ?>
-    <div id="bottomRow" class="row clearfix">     
+    <div id="bottomRow" class="row clearfix">
         <?php if($this->countModules('bottom1')) : ?>
-        <div id="bottom1"> 
-              <jdoc:include type="modules" name="bottom1" style="html5" />
+        <div id="bottom1">
+              <jdoc:include type="modules" name="bottom1" style="gangnam" />
         </div>
-        <?php endif; ?>                    
+        <?php endif; ?>
         <?php if($this->countModules('bottom2')) : ?>
         <div id="bottom2">
-              <jdoc:include type="modules" name="bottom2" style="html5" />
+              <jdoc:include type="modules" name="bottom2" style="gangnam" />
         </div>
-        <?php endif; ?>                    
+        <?php endif; ?>
         <?php if($this->countModules('bottom3')) : ?>
         <div id="bottom3">
-              <jdoc:include type="modules" name="bottom3" style="html5" />
+              <jdoc:include type="modules" name="bottom3" style="gangnam" />
         </div>
-        <?php endif; ?>                 
+        <?php endif; ?>
         <?php if($this->countModules('bottom4')) : ?>
         <div id="bottom4">
-              <jdoc:include type="modules" name="bottom4" style="html5" />
+              <jdoc:include type="modules" name="bottom4" style="gangnam" />
         </div>
         <?php endif; ?>
             <?php if($this->countModules('bottom5')) : ?>
         <div id="bottom5">
-              <jdoc:include type="modules" name="bottom5" style="html5" />
+              <jdoc:include type="modules" name="bottom5" style="gangnam" />
         </div>
         <?php endif; ?>
         <?php if($this->countModules('bottom6')) : ?>
         <div id="bottom6">
-              <jdoc:include type="modules" name="bottom6" style="html5" />
+              <jdoc:include type="modules" name="bottom6" style="gangnam" />
         </div>
         <?php endif; ?>
     </div>
     <?php endif; ?>
     <?php if ($footerModules > 0) : ?>
-    <footer role="contentinfo" class="row clearfix">        
+    <footer role="contentinfo" class="row clearfix">
         <?php if($this->countModules('footer1')) : ?>
-        <div id="footer1"> 
-            <jdoc:include type="modules" name="footer1" style="html5" headerLevel="4" />
+        <div id="footer1">
+            <jdoc:include type="modules" name="footer1" style="gangnam" headerLevel="4" />
         </div>
-        <?php endif; ?>                         
+        <?php endif; ?>
         <?php if($this->countModules('footer2')) : ?>
         <div id="footer2">
-            <jdoc:include type="modules" name="footer2" style="html5" headerLevel="4" />
+            <jdoc:include type="modules" name="footer2" style="gangnam" headerLevel="4" />
         </div>
-        <?php endif; ?>	    
+        <?php endif; ?>
         <?php if($this->countModules('footer3')) : ?>
         <div id="footer3">
-            <jdoc:include type="modules" name="footer3" style="html5" headerLevel="4" />
+            <jdoc:include type="modules" name="footer3" style="gangnam" headerLevel="4" />
         </div>
-        <?php endif; ?>		  
+        <?php endif; ?>
         <?php if($this->countModules('footer4')) : ?>
         <div id="footer4">
-            <jdoc:include type="modules" name="footer4" style="html5" headerLevel="4"/>
+            <jdoc:include type="modules" name="footer4" style="gangnam" headerLevel="4"/>
         </div>
-        <?php endif; ?>						
+        <?php endif; ?>
     </footer>
 	<?php endif; ?>
-</div>                                      
-<footer id="creditRow" class="row clearfix">      
-    <div id="creditRight"><a href="http://joomlafuture.com" title="OneWeb, a free, responsive, html5 template for Joomla! 2.5+">OneWeb</a>, a free Joomla! template from <a href="http://internet-inspired.com" title="Internet Inspired - Professional Joomla! Websmithing">Internet Inspired!</a> &copy; <?php echo date("Y"); ?></div>				
+</div>
+<footer id="creditRow" class="row clearfix">
+    <div id="creditRight"><a href="http://joomlafuture.com" title="OneWeb, a free, responsive, gangnam template for Joomla! 2.5+">OneWeb</a>, a free Joomla! template from <a href="http://internet-inspired.com" title="Internet Inspired - Professional Joomla! Websmithing">Internet Inspired!</a> &copy; <?php echo date("Y"); ?></div>
 </footer>
 <jdoc:include type="modules" name="debug"/>
 <?php if ($scripts > 0) : ?>

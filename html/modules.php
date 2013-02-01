@@ -12,7 +12,7 @@ Sources:	Beez5 by Angie Radkte
 
 /* Let's make the module output using HTML5 elements */
 
-function modChrome_html5($module, &$params, &$attribs)
+function modChrome_gangnam($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
 	if (!empty ($module->content)) : ?>
