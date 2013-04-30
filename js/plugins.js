@@ -17,14 +17,14 @@ window.log = function(){
 
 // place any jQuery/helper plugins in here, instead of separate, slower script files.
 
-/*!
-* OneWeb v3.0
-* Author: Seth Warburton
-* Copyright: Seth Warburton - (C) 2013 - All rights reserved
-* Licenses: GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
-*           DBAD License http://philsturgeon.co.uk/code/dbad-license
-* Date: 09 January 2013
-*/
+/*
+ * OneWeb v3.0
+ * Author: Seth Warburton
+ * Copyright: Seth Warburton - (C) 2013 - All rights reserved
+ * Licenses: GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html
+ *           DBAD License http://philsturgeon.co.uk/code/dbad-license
+ * Date: 30 April 2013
+ */
 
 (function( $ ) {
   $.fn.deviceHooks = function() {
