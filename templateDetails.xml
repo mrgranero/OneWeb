@@ -1,90 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="2.5" type="template" client="site">
-	<name>Oneweb</name>
-	<creationDate>June 1st, 2012</creationDate>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.0" type="template" client="site">
+	<name>oneweb</name>
+	<version>3.0</version>
+	<creationDate>30/04/2013</creationDate>
 	<author>Seth Warburton</author>
 	<authorEmail>seth@internet-inspired.com</authorEmail>
-	<authorUrl>http://internet-inspired.com</authorUrl>
-	<copyright>Copyright (C) 2012 Seth Warburton | Internet Inspired! All rights reserved.</copyright>
-	<license>GNU General Public License version 2 or later</license>
-	<version>2.0</version>	
-	<description><![CDATA[
-	<p>OneWeb is a lightweight responsive,'mobile first' HTML5 boilerplate template created by Seth Warburton from <a href="http://internet-inspired.com">Internet Inspired!</a>.</p><p>It incorporates, and was inspired by, the hard work of others, notably<p>
-	<ul>
-	<li>Mobile first thinking and sexy typographic basics from <a href="http://www.stuffandnonsense.co.uk/projects/320andup/">320 and up</a> by Andy Clarke</li>
-	<li>Assorted Joomla! tricks from Matt Thomas' <a href="http://construct-framework.com/">Construct Framework</a></li>
-	</ul>
-	]]></description>
-		
+	<copyright>Copyright (C) 2013 Internet Inspired. All rights reserved.</copyright>
+	<description>TPL_ONEWEB_XML_DESCRIPTION</description>
 	<files>
         <filename>favicon.ico</filename>
+        <filename>apple-touch-icon.png</filename>
+        <filename>apple-touch-icon-57x57-precomposed.png</filename>
+        <filename>apple-touch-icon-72x72-precomposed.png</filename>
+        <filename>apple-touch-icon-114x114-precomposed.png</filename>
+        <filename>apple-touch-icon-144x144-precomposed.png</filename>
         <filename>index.php</filename>
 		<filename>logic.php</filename>
         <filename>templateDetails.xml</filename>
+		<folder>language</folder>
 		<folder>css</folder>
 		<folder>fonts</folder>
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>
 	</files>
-	
 	<positions>
-		<position>above1</position>		
-		<position>above2</position>
-		<position>above3</position>
-		<position>above4</position>
-		<position>breadcrumbs</position>
-		<position>banner</position>
-		<position>left</position>
-		<position>main</position>
-		<position>bottom1</position>		
-		<position>bottom2</position>
-		<position>bottom3</position>
-		<position>bottom4</position>
-		<position>bottom5</position>
-		<position>bottom6</position>
 		<position>menu</position>
-		<position>search</position>
-		<position>footer1</position>		
-		<position>footer2</position>
-		<position>footer3</position>
-		<position>footer4</position>
+		<position>banner</position>
+		<position>above</position>
+		<position>complementary</position>
+		<position>below</position>
+		<position>contentinfo</position>
+		<position>breadcrumbs</position>
+		<position>debug</position>
 	</positions>
-		
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_oneweb.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_oneweb.sys.ini</language>
+	</languages>
 	<config>
 		<fields name="params">
-			<fieldset name="Customise Joomla! output" label="Customise Joomla! output" addfieldpath="/templates/oneweb/functions">
-				<field name="loadMoo" type="radio" default="0" label="Load MooTools?" description="Load the MooTools JavaScript library that is included with Joomla? If it is not in use you can save a lot of Kb by not loading it. Setting this to no will also disable caption.js">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+			<fieldset name="head" label="TPL_ONEWEB_HEAD_LABEL">
+				<field name="setGeneratorTag" type="text" default="Internet Inspired! - http://internet-inspired.com" label="TPL_ONEWEB_GENERATOR_LABEL" description="TPL_ONEWEB_GENERATOR_DESC" />
+				<field name="analytics" type="text" default="" label="TPL_ONEWEB_ANALYTICS_LABEL" description="TPL_ONEWEB_ANALYTICS_DESC" filter="raw" />
+				<field name="googleWebFonts" type="text" default="" label="TPL_ONEWEB_WEBFONTS_LABEL" description="TPL_ONEWEB_WEBFONTS_DESC" filter="raw" />
+			</fieldset>
+			<fieldset name="customise" label="TPL_ONEWEB_ASSETS_LABEL">
+				<field name="loadMoo" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_MOO_LABEL" description="TPL_ONEWEB_MOO_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="jQuery" type="radio" default="0" label="Load jQuery?" description="Load the latest, minified, version of jQuery (1.7.2) from Google?">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="jQuery" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_JQUERY_LABEL" description="TPL_ONEWEB_JQUERY_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="modernizr" type="radio" default="1" label="Load Modernizr?" description="Modernizr is an awesome feature detection library. See http://modernizr.com/ for details">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="bootBloat" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_BOOTSTRAP_LABEL" description="TPL_ONEWEB_BOOTSTRAP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="badBrowser" type="radio" default="0" label="Support bad browsers?" description="Enabling this will load some additional JS to add media query support and CSS3 psuedo selectors to browsers that don't natively support them (IE8 and below)">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="scripts" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_SCRIPTS_LABEL" description="TPL_ONEWEB_SCRIPTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="scripts" type="radio" default="0" label="Load custom scripts?" description="Load the files scripts.js and plugins.js from the /js folder? If you want to add scripts place them in these files and then load them here, rather than using inidividual files">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="frontpage" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_FRONTPAGE_LABEL" description="TPL_ONEWEB_FRONTPAGE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field name="frontpage" type="radio" default="0" label="Hide frontpage component?" description="Hide the main content area on the front-page?">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+			</fieldset>
+			<fieldset name="SOCIAL" label="TPL_ONEWEB_SOCIAL_LABEL">
+				<field name="twitter" type="text" default="" label="TPL_ONEWEB_TWITTER_LABEL" description="TPL_ONEWEB_TWITTER_DESC" />
+				<field name="twitterLink" type="text" default="" label="TPL_ONEWEB_TWITTER_LINK_LABEL" description="TPL_ONEWEB_TWITTER_LINK_DESC" filter="raw" />
+
+				<field name="dribbble" type="text" default="" label="TPL_ONEWEB_DRIBBBLE_LABEL" description="TPL_ONEWEB_DRIBBBLE_DESC" />
+				<field name="dribbbleLink" type="text" default="" label="TPL_ONEWEB_DRIBBBLE_LINK_LABEL" description="TPL_ONEWEB_DRIBBBLE_LINK_DESC" filter="raw" />
+
+				<field name="facebook" type="text" default="" label="TPL_ONEWEB_FACEBOOK_LABEL" description="TPL_ONEWEB_FACEBOOK_DESC" />
+				<field name="facebookLink" type="text" default="" label="TPL_ONEWEB_FACEBOOK_LINK_LABEL" description="TPL_ONEWEB_FACEBOOK_LINK_DESC" filter="raw" />
+
+				<field name="googleplus" type="text" default="" label="TPL_ONEWEB_GOOGLEPLUS_LABEL" description="TPL_ONEWEB_GOOGLEPLUS_DESC" />
+				<field name="googleplusLink" type="text" default="" label="TPL_ONEWEB_GOOGLEPLUS_LINK_LABEL" description="TPL_ONEWEB_GOOGLEPLUS_LINK_DESC" filter="raw" />
+
+				<field name="github" type="text" default="" label="TPL_ONEWEB_GITHUB_LABEL" description="TPL_ONEWEB_GITHUB_DESC" />
+				<field name="githubLink" type="text" default="" label="TPL_ONEWEB_GITHUB_LINK_LABEL" description="TPL_ONEWEB_GITHUB_LINK_DESC" filter="raw" />
+			</fieldset>
+			<fieldset name="TOOLS" label="TPL_ONEWEB_TOOLS_LABEL">
+				<field name="debug" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_DEBUG_LABEL" description="TPL_ONEWEB_DEBUG_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
 				</field>
-				<field type="spacer" default=" " />
-			<field name="setGeneratorTag" type="text" default="Internet Inspired! - Creative Joomla! templates - http://internet-inspired.com" label="Generator Meta Tag" description="Customise the generator meta tag output by your template." size="80" />
-			<field name="verification" type="text" default="Content_string_Google_gives_you" label="Google verification meta" description="Change Content_string_Google_gives_you to the meta content value Google gave in their code. You only need the content value, not the complete code" filter="raw" size="80" />
-			<field name="analytics" type="text" default="UA-XXXXX-X" label="Google Analytics ID" description="Change UA-XXXXX-X to be your site's ID" size="15" filter="raw" />						
-			<field name="googleWebFonts" type="text" default="copy the css link from Google here" label="Google Web Fonts collection" description="Paste in the link to the Google Web fonts collection that you want to be available to use in style.css. Visit http://code.google.com/webfonts, build a collection and then copy the link here" filter="raw" size="160" />
-			</fieldset>				
+			</fieldset>
 		</fields>
 	</config>
 </extension>
