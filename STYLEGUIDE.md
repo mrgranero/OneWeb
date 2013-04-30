@@ -8,7 +8,7 @@ IDs are only used on html elements when it is completely un-avoidable (that's ne
 
 ### Don't over-specify!
 
-Add only as many slectors as you need to do the job, no more. It's not clever and you only make life harder down the line.
+Add only as many selectors as you need to do the job, no more. It's not clever and you only make life harder down the line.
 
 ## Tabs to indent code
 
@@ -21,7 +21,7 @@ One tab (equal to 4 spaces) is used to indent / nest markup and Scss
 		left: 1em;
 	}
 
-Scss is also nested with a tab, like so:
+Scss is also nested with a tab, with child rules spaced, like so:
 
 	figure {
 		margin: $gutter 0;
@@ -71,7 +71,7 @@ Major sections are always preceded by 2 spaces.
 
 	// Are like this. They are stripped on compile.
 
-## CSS rules are sorted alphabetically (that's teh intention at least!).
+## CSS rules are sorted alphabetically (that's the intention at least!).
 
 This will aid quick error finding (notice the 2 left declarations).
 
