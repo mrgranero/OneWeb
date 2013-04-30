@@ -6,7 +6,7 @@ Version: 	3.0
 Created: 	April 2013
 Copyright:	Seth Warburton - (C) 2013 - All rights reserved
 Licenses:	GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-2.0.html
-            DBAD License http://philsturgeon.co.uk/code/dbad-license
+                DBAD License http://philsturgeon.co.uk/code/dbad-license
 /* ===================================================================== */
 
 // Load template logic
