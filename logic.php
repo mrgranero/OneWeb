@@ -1,57 +1,71 @@
 <?php defined('_JEXEC') or die;
 /* =====================================================================
-Template:	OneWeb for Joomla 2.5
-Author: 	Seth Warburton - Internet Inspired! - @nternetinspired
-Version: 	2.0
-Created: 	May 2012
-Copyright:	Seth Warburton - (C) 2012 - All rights reserved
-License:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
-Sources:	http://html5boilerplate.com/
-			http://construct-framework.com/
+Template:   OneWeb for Joomla
+Author:     Seth Warburton - Internet Inspired! - @nternetinspired
+Version:    3.0
+Created:    April 2013
+Copyright:  Seth Warburton - (C) 2013 - All rights reserved
+Licenses:   GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-2.0.html
+              DBAD License http://philsturgeon.co.uk/code/dbad-license
+Sources:    http://construct-framework.com
 /* ===================================================================== */
 
+$app                   = JFactory::getApplication();
+
 // Define shortcuts for template parameters
-$loadMoo 				= $this->params->get('loadMoo');
-$jQuery 				= $this->params->get('jQuery');
-$modernizr				= $this->params->get('modernizr');
-$badBrowser				= $this->params->get('badBrowser');
-$scripts 				= $this->params->get('scripts');
-$frontpage				= $this->params->get('frontpage');
-$setGeneratorTag		= $this->params->get('setGeneratorTag');
-$analytics 				= $this->params->get('analytics');
-$verification			= $this->params->get('verification');
-$googleWebFonts			= $this->params->get('googleWebFonts');
+$loadMoo               = $this->params->get('loadMoo');
+$jQuery                = $this->params->get('jQuery');
+$bootBloatJS           = $this->params->get('bootBloatJS');
+$scripts               = $this->params->get('scripts');
+$frontpage             = $this->params->get('frontpage');
+$setGeneratorTag       = $this->params->get('setGeneratorTag');
+$analytics             = $this->params->get('analytics');
+$googleplus            = $this->params->get('googleplus');
+$googleWebFonts        = $this->params->get('googleWebFonts');
+$twitter               = $this->params->get('twitter');
+$twitterLink           = $this->params->get('twitterLink');
+$dribbble              = $this->params->get('dribbble');
+$dribbbleLink          = $this->params->get('dribbbleLink');
+$facebook              = $this->params->get('facebook');
+$facebookLink          = $this->params->get('facebookLink');
+$googleplus            = $this->params->get('googleplus');
+$googleplusLink        = $this->params->get('googleplusLink');
+$github                = $this->params->get('github');
+$githubLink            = $this->params->get('githubLink');
+$debug                = $this->params->get('debug');
 
-// Calculate the number of modules published in a positon 
-$aboveModules = ($this->countModules('above1')?1:0)+ ($this->countModules('above2')?1:0)+ ($this->countModules('above3')?1:0)+ ($this->countModules('above4')?1:0);
-$bottomModules = ($this->countModules('bottom1')?1:0)+ ($this->countModules('bottom2')?1:0)+ ($this->countModules('bottom3')?1:0)+ ($this->countModules('bottom4')?1:0)+ ($this->countModules('bottom5')?1:0)+ ($this->countModules('bottom6')?1:0);
-$footerModules = ($this->countModules('footer1')?1:0)+ ($this->countModules('footer2')?1:0)+ ($this->countModules('footer3')?1:0)+ ($this->countModules('footer4')?1:0);
+// Detecting Active Variables
+$option                = $app->input->getCmd('option', '');
+$view                  = $app->input->getCmd('view', '');
+$itemid                = $app->input->getCmd('Itemid', '');
 
-#-----------------------------See if we are on the homepage-----------------------------#
-// from Anthony Olsen of Joomla Bamboo, http://www.joomlabamboo.com
+// Are we are on the homepage?
+$menu                  = $app->getMenu();
+if ($menu->getActive() == $menu->getDefault()) {$siteHome = 'home';} else {$siteHome = 'sub';};
 
-$activeMenu = & JSite::getMenu();
-if ($activeMenu->getActive() == $activeMenu->getDefault()) {$siteHome = 'home';}else{$siteHome = 'sub';}
+// Do we have social links?
+$social                = ($twitterLink?1:0)+ ($dribbbleLink?1:0)+ ($facebookLink?1:0)+ ($googleplusLink?1:0)+ ($githubLink?1:0);
 
 #----------------------------- Construct Code Snippets-----------------------------#
 // GPL code taken from Construct template framework by Matt Thomas http://construct-framework.com/
 
 // To enable use of site configuration
-$app 					= JFactory::getApplication();
-$pageParams             		= $app->getParams();
+$pageParams            = $app->getParams();
 
 // Returns a reference to the global document object
-$doc 					= JFactory::getDocument();
+$doc                   = JFactory::getDocument();
 
 // Define relative path to the  current template directory
-$template 				= 'templates/'.$this->template;
+$template              = 'templates/'.$this->template;
 
 // Change generator tag
 $this->setGenerator($setGeneratorTag);
 
+#----------------------------- End Construct Code -----------------------------#
+
 // Remove MooTools if set to no.
 if ( !$loadMoo ) {
-	unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
+   unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
@@ -59,48 +73,39 @@ if ( !$loadMoo ) {
     unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools.js']);
     unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
 }
-#----------------------------- End Construct Code -----------------------------#
+// Self explanatory
+if ( !$bootBloat ) {
+  unset($doc->_scripts[$this->baseurl.'media/jui/js/jquery.min.js']);
+  unset($doc->_scripts[$this->baseurl.'media/jui/js/jquery-noconflict.js']);
+  unset($doc->_scripts[$this->baseurl.'media/jui/js/bootstrap.min.js']);
+}
+
 
 #----------------------------- Inject extras into the head -----------------------------#
-// You can create your own custom Modernizr build http://modernizr.com/ and change the filename here to match
-if ($modernizr) {
-$doc->addCustomTag('<script src="'.$template.'/js/modernizr-2.5.3.min.js"></script>');
+// Author info to get a pretty G+ search result
+if ($googleplus != "") {
+$doc->addCustomTag('<link rel="author" href="<?php echo htmlspecialchars($googleplus); ?>">');
 }
-// Currently the latest minified version from Google. Change the version no. here if you want
+// Currently the latest minified version from Google. It's smaller than the Joomla version.
 if ($jQuery) {
-  $doc->addCustomTag('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>');
+  $doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jquery-1.8.2.min.js');
 }
-// Site icons: http://mathiasbynens.be/notes/touch-icons 
-// For third-generation iPad with high-resolution Retina display:
-$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="144x144" href="'.$template.'/images/large/apple-touch-icon.png">');
-//For iPhone with high-resolution Retina display:
-$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="114x114" href="'.$template.'/images/large/apple-touch-icon.png">');
-// For first- and second-generation iPad:
-$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" sizes="72x72" href="'.$template.'/images/medium/apple-touch-icon.png">');
-// For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
-$doc->addCustomTag('<link rel="apple-touch-icon-precomposed" href="'.$template.'/images/small/apple-touch-icon-precomposed.png">');
-
 // Global styles
-$doc->addStyleSheet($template.'/css/style-commented.css');
+$doc->addStyleSheet($template.'/css/style.css');
 // Google fonts styles
-if ($googleWebFonts != "copy the css link from Google here") {
-$doc->addStyleSheet(''.$googleWebFonts.'');
+if ($googleWebFonts != "") {
+  $doc->addStyleSheet(''.$googleWebFonts.'');
+}
+//Debug stylesheet
+if ($debug =="1") {
+  $doc->addStyleSheet('https://rawgithub.com/nternetinspired/debug-css/master/debug.css');
 }
 // Metas
 $doc->setMetaData( 'HandheldFriendly', 'True' );
 $doc->setMetaData( 'MobileOptimized', '320' );
 // This lets mobile devices know we have thought about them
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1.0' );
-// Apple specific stuff
-$doc->setMetaData( 'apple-mobile-web-app-capable', 'True' );
-$doc->setMetaData( 'apple-mobile-web-app-status-bar-style', 'black' );
+// Kick IE out of compatibility mode and disable it
+$doc->setMetaData( 'X-UA-Compatible', 'IE=edge;chrome=1' );
 // For Win mobile
 $doc->setMetaData( 'cleartype', 'on');
-
-// CSS3 pseudo selector and media query support for IE8 and below
-if ($badBrowser) {
-$doc->addCustomTag('<!--[if (lt IE 9) & (!IEMobile)]>');
-$doc->addCustomTag('<script src="'.$template.'/js/respond.min.js"></script>');
-$doc->addCustomTag('<script src="'.$template.'/js/selectivizr-min.js"></script>');
-$doc->addCustomTag('<![endif]-->');
-}
