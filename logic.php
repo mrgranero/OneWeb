@@ -5,8 +5,8 @@ Author:     Seth Warburton - Internet Inspired! - @nternetinspired
 Version:    3.0
 Created:    April 2013
 Copyright:  Seth Warburton - (C) 2013 - All rights reserved
-Licenses:   GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-2.0.html
-              DBAD License http://philsturgeon.co.uk/code/dbad-license
+Licenses:   GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html
+            DBAD License http://philsturgeon.co.uk/code/dbad-license
 Sources:    http://construct-framework.com
 /* ===================================================================== */
 
@@ -32,7 +32,7 @@ $googleplus            = $this->params->get('googleplus');
 $googleplusLink        = $this->params->get('googleplusLink');
 $github                = $this->params->get('github');
 $githubLink            = $this->params->get('githubLink');
-$debug                = $this->params->get('debug');
+$debug                 = $this->params->get('debug');
 
 // Detecting Active Variables
 $option                = $app->input->getCmd('option', '');
@@ -79,7 +79,6 @@ if ( !$bootBloat ) {
   unset($doc->_scripts[$this->baseurl.'media/jui/js/jquery-noconflict.js']);
   unset($doc->_scripts[$this->baseurl.'media/jui/js/bootstrap.min.js']);
 }
-
 
 #----------------------------- Inject extras into the head -----------------------------#
 // Author info to get a pretty G+ search result
