@@ -6,9 +6,35 @@ Because I'm a little obsessive about some things…
 
 IDs are only used on html elements when it is completely un-avoidable (that's never the case for styling).
 
-## Don't over-specify!
+### Don't over-specify!
 
 Add only as many slectors as you need to do the job, no more. It's not clever and you only make life harder down the line.
+
+## Tabs to indent code
+
+One tab (equal to 4 spaces) is used to indent / nest markup and Scss
+
+	.example {
+		color: #bada55;
+		font-family: Baskerville, Georgia, serif;
+		font-weight: 300;
+		left: 1em;
+	}
+
+Scss is also nested with a tab, like so:
+
+	figure {
+		margin: $gutter 0;
+
+		img {
+			display:block;
+			margin-bottom: $half-gutter;
+		}
+
+		figcaption {
+			@extend .muted;
+		}
+	}
 
 ## CSS Class naming conventions
 
@@ -44,17 +70,6 @@ Major sections are always preceded by 2 spaces.
 ### Uncompiled Scss comments
 
 	// Are like this. They are stripped on compile.
-
-## Tabs to indent code
-
-One tab (equal to 4 spaces) is used to indent / nest markup and Scss
-
-	.example {
-		color: #bada55;
-		font-family: Baskerville, Georgia, serif;
-		font-weight: 300;
-		left: 1em;
-	}
 
 ## CSS rules are sorted alphabetically (that's teh intention at least!).
 
