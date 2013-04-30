@@ -61,7 +61,7 @@ Major sections are always preceded by 2 spaces.
  	 * LOOK LIKE THIS
  	 */
 
-### CSS comments, for informational purposes ;)
+### CSS comments
 
 	/* Look like this. I'm a comment. Don't sweat it. */
 
