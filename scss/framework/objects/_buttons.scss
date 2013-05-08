@@ -1,0 +1,78 @@
+@if $use-buttons == true {
+
+
+/* ==========================================================================
+    BUTTONS
+============================================================================= */
+
+/* Default button style */
+.btn {
+    background-color: $brand-background;
+    border: 1px solid $brand-border;
+    border-radius: $brand-round;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 100%;
+    font-family: $button-font-family;
+    line-height: 3;
+    padding: 0 1em;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &,
+    &:hover {
+        text-decoration: none;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+/*
+ * BUTTON SIZING
+ */
+.btn-small {
+    line-height: 2;
+    padding: 0 0.5em;
+}
+
+.btn-large {
+    line-height: 4;
+    padding: 0 1.5em;
+}
+
+.btn-huge {
+    line-height: 5;
+    padding: 0 2em;
+}
+
+
+/*
+ * BUTTON INTENT
+ */
+.btn-primary {
+    background-color: #428bca;
+    color: #fff;
+}
+
+.btn-success {
+    background-color: #5cb85c;
+    color: #fff;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: #fff;
+}
+.btn-info {
+    background-color: #5bc0de;
+    color: #fff;
+}
+.btn-warning {
+    background-color: #f0ad4e;
+    color: #fff;
+}
+
+}//endif
