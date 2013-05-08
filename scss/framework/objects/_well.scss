@@ -1,13 +1,14 @@
 @if $use-well == true{
 
+
 /* ==========================================================================
     WELLS
 ============================================================================= */
 
-.well {
-	@extend .clearfix;
-    display: block;
-    padding: $single-spacing-unit;
-}
+	.well {
+		@extend .clearfix;
+	    display: block;
+	    padding: $single-spacing-unit;
+	}
 
 }//endif
