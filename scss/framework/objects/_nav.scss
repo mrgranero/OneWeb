@@ -1,0 +1,43 @@
+@if $use-nav == true or $use-pagination == true or $use-breadcrumb == true {
+
+/* ==========================================================================
+    NAVIGATION
+============================================================================= */
+
+/* Remove list styles and throw child elements into a horizontal list. */
+.nav {
+
+    list-style: none;
+
+    li {
+
+        &,
+        a {
+            display: inline-block;
+
+        }
+
+        a {
+            padding: $half-spacing-unit;
+
+        }
+    }
+
+}
+
+/* Get a vertical list of blocky, finger-friendly, links. */
+
+.nav-stacked {
+
+    @extend .nav;
+
+    li {
+
+        &,
+        a {
+            display: block;
+        }
+    }
+}
+
+}//endif
