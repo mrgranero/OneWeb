@@ -51,7 +51,7 @@ Use hypens only
 
 	/* ==========================================================================
     	LOOK LIKE THIS
-	========================================================================== */
+	============================================================================= */
 
 Major sections are always preceded by 2 spaces.
 
@@ -64,6 +64,16 @@ Major sections are always preceded by 2 spaces.
 ### CSS comments
 
 	/* Look like this. I'm a comment. Don't sweat it. */
+	
+and
+
+	/*
+	 * Multi-line commments, where verbosity forces the
+	 * line to wrap in order to properly contain all the
+	 * commenty goodness...
+	 * 
+	 * Look like this!
+	 * /
 
 ### Uncompiled Scss comments
 
