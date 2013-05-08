@@ -6,7 +6,6 @@
 
 /* Remove list styles and throw child elements into a horizontal list. */
 .nav {
-
     list-style: none;
 
     li {
@@ -28,7 +27,6 @@
 /* Get a vertical list of blocky, finger-friendly, links. */
 
 .nav-stacked {
-
     @extend .nav;
 
     li {
