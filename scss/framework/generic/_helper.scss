@@ -1,0 +1,50 @@
+/* ==========================================================================
+    HELPER CLASSES
+============================================================================= */
+
+/* Clearfix the parent of floated elements tp prevent it collapsing */
+.clearfix {
+    @include clearfix;
+}
+
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+    @include visuallyhidden;
+}
+
+/* Image replacement. */
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/* Mute an object by reducing its opacity. */
+.muted {
+    filter: alpha(opacity = 50)!important;
+    opacity: 0.5!important;
+
+}
+
+/* Round the borders of an object */
+.rounded {
+    @include vendor (border-radius, $brand-round);
+}
+
+/* Add/remove floats */
+.float-right {
+    float: right;
+}
+.float-left {
+    float: left;
+}
+.float-none {
+    float: none !important;
+}
