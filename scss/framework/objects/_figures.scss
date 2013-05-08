@@ -1,0 +1,22 @@
+/* ==========================================================================
+   	FIGURES
+   ========================================================================== */
+
+figure {
+	margin: $root-spacing-unit 0;
+
+	img {
+		display:block;
+		margin-bottom: $half-spacing-unit;
+	}
+
+	figcaption {
+		display: block;
+		@extend .muted;
+		@extend .milli;
+	}
+}
+
+figure > img {
+    display:block;
+}

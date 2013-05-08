@@ -1,0 +1,45 @@
+
+/* ==========================================================================
+    QUOTES
+============================================================================= */
+
+blockquote {
+    border-left: 3px solid $brand-border;
+    margin-left: 0;
+    padding: $single-spacing-unit $single-spacing-unit*1.5;
+
+    &:before,
+    &:after {
+        content: '';
+        content: none;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+cite {
+    @extend .milli;
+    display: block;
+    margin-top: $half-spacing-unit;
+
+    &:before {
+        content: "\2014";
+        margin-right: $half-spacing-unit;
+    }
+}
+
+/* Inline quotes */
+q {
+    quotes: "\2018" "\2019" "#{$open-quote}" "#{$close-quote}";
+
+    &:before {
+        content: "\2018";
+        content: open-quote;
+    }
+    &:after {
+        content: "\2019";
+        content: close-quote;
+    }
+}

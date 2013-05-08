@@ -1,0 +1,20 @@
+
+/* ==========================================================================
+    LISTS
+============================================================================= */
+
+/* Resets default styling. */
+ul,
+ol,
+dd {
+    margin-left: 0;
+    padding: 0;
+}
+
+/* Say no to vertical spacing in nested lists! */
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+     }
+}

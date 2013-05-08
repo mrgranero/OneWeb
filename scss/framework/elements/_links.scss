@@ -1,0 +1,26 @@
+
+/* ==========================================================================
+   	LINKS
+============================================================================= */
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+	    color: $link-hover-color;
+	}
+
+	@include vendor(transition, all .2s linear);
+}
+
+/* Back to top link. */
+ a.to-top {
+ 	bottom: 0;
+ 	color: $root-font-color;
+ 	cursor: pointer;
+ 	line-height: 1;
+ 	padding: $single-spacing-unit;
+ 	position: fixed;
+}
