@@ -1,0 +1,31 @@
+/* ==========================================================================
+    VERTICAL RHYTHM
+============================================================================= */
+
+/*
+ * Apply consistent spacing, derived from the baseline height and default
+ * font size, to generate a consistent vertical rhythm throughout the site.
+ */
+
+/* Elements */
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dl,
+blockquote,p,address,
+table,
+figure,
+fieldset,
+form,
+pre,
+small,
+/* Objects and abstractions */
+.btn,
+.media,
+.well,
+.kilo,
+.mega,
+.giga,
+.milli,
+.micro {
+	margin-top: 0;
+	@include rhythm;
+}
