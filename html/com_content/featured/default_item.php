@@ -119,7 +119,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 	<?php endif; ?>
 		<?php echo $this->item->event->beforeDisplayContent; ?>
 
-	<section class="article-body">
+	<div class="article-body">
 		<?php echo $this->item->introtext; ?>
 		<?php if ($useDefList AND ($info == 1 OR $info == 2)) : ?>
 			<footer>
@@ -201,7 +201,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 				endif; ?>
 			</a>
 		<?php endif; ?>
-	<section>
+	<div>
 </article>
 <?php if ($this->item->state == 0) : ?>
 </div>

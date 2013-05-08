@@ -125,7 +125,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php endif; ?>
 	<?php  if (!$params->get('show_intro')) : echo $this->item->event->afterDisplayTitle; endif; ?>
 		<?php if ($this->params->get('show_vote', 1)) : ?>
-			<section class="rating"><?php echo $this->item->event->beforeDisplayContent; ?></section>
+			<div class="rating"><?php echo $this->item->event->beforeDisplayContent; ?></div>
 		<?php endif; ?>
 	<?php if (isset($urls) AND ((!empty($urls->urls_position) AND ($urls->urls_position == '0')) OR  ($params->get('urls_position') == '0' AND empty($urls->urls_position)))
 		OR (empty($urls->urls_position) AND (!$params->get('urls_position')))): ?>
@@ -149,9 +149,9 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php if (isset ($this->item->toc)) :
 		echo $this->item->toc;
 	endif; ?>
-	<section class="article-body">
+	<div class="article-body">
 	<?php echo $this->item->text; ?>
-	</section>
+	</div>
 	<?php if ($info == 1 OR $info == 2) : ?>
 		<footer class="article-info">
 			<?php if ($info == 1): ?>

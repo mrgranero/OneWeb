@@ -108,7 +108,7 @@ $info = $this->item->params->get('info_block_position', 0);
 		<?php endif; ?>
 		</footer>
 	<?php endif; ?>
-<section class="article-body">
+<div class="article-body">
 	<?php if (!$params->get('show_intro')) : ?>
 		<?php echo $this->item->event->afterDisplayTitle; ?>
 	<?php endif; ?>
@@ -220,6 +220,6 @@ $info = $this->item->params->get('info_block_position', 0);
 		endif; ?>
 		</a>
 	<?php endif; ?>
-	</section>
+	</div>
 </article>
 <?php echo $this->item->event->afterDisplayContent; ?>
