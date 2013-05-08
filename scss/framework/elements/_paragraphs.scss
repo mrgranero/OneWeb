@@ -1,0 +1,9 @@
+
+/* ==========================================================================
+   	PARAGRAPHS
+============================================================================= */
+
+/* First paragraph of an article, bigger for added awesome */
+p:first-of-type {
+    @include font-size($h3-size);
+}

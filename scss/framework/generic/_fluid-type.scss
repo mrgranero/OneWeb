@@ -4,10 +4,8 @@
     FLUID TYPE
 ============================================================================= */
 
-/* Smoothly increase root font size with viewport */
+/* Slowly increase root font size with viewport */
 html {
-
-	@include vendor(transition, font-size .2s linear);
 
 	@include media-query(desk) {
 		font-size: 1.063em; // 17px
