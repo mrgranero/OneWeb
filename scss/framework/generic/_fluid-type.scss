@@ -8,11 +8,11 @@
 html {
 
 	@include media-query(desk) {
-		font-size: 1.063em; // 17px
+		font-size: 106.3%; // 17px
 	}
 
 	@include media-query(desk-wide) {
-		font-size: 1.125em; // 18px
+		font-size: 112.5%; // 18px
 	}
 
 }
