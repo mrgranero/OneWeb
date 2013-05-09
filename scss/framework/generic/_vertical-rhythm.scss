@@ -14,19 +14,9 @@ ul,ol,dl,
 blockquote,p,address,
 table,
 figure,
-fieldset,
-form,
+fieldset,form,legend,input,
 pre,
-small,
-/* Objects and abstractions */
-.btn,
-.media,
-.well,
-.kilo,
-.mega,
-.giga,
-.milli,
-.micro {
+small {
 	margin-top: 0;
 	@include rhythm;
 }
