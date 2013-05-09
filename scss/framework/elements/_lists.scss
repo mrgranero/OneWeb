@@ -3,18 +3,34 @@
     LISTS
 ============================================================================= */
 
-/* Resets default styling. */
+/* There's a reason it's called 'hanging punctuation', bullets should be indented.
+ * See: http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2
+ * for an explanation why. The following kills browser default indents. Nice. */
 ul,
-ol,
-dd {
-    margin-left: 0;
+ol {
     padding: 0;
 }
 
-/* Say no to vertical spacing in nested lists! */
+/* A little style maestro! */
+ul {
+	list-style-type: circle;
+
+	// except on Joomla's page nav.
+	&.pager {
+		list-style-type: none;
+	}
+}
+
+ol {
+	list-style-type: lower-roman;
+}
+
+/* We don't need vertical space in nested lists, but we do need to add
+* the default indent we removed above! */
 li {
     > ul,
     > ol {
          margin-bottom: 0;
+         padding-left: $double-spacing-unit;
      }
 }
