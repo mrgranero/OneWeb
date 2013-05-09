@@ -20,7 +20,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
 <head>
 <jdoc:include type="head" />
     <!--[if lt IE 9]>
-        <script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"</script>
     <![endif]-->
 </head>
     <body class="<?php echo $siteHome ; ?>-page <?php echo $option . " view-" . $view . " itemid-" . $itemid . "";?>">
