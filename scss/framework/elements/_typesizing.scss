@@ -5,13 +5,13 @@
 
 /* Classes for super-sizing type without the semantics of h tags. Useful in
  * page banners and the like */
-.giga{
+.giga {
     @include font-size($giga-size);
 }
-.mega{
+.mega {
     @include font-size($mega-size);
 }
-.kilo{
+.kilo {
     @include font-size($kilo-size);
 }
 
@@ -23,9 +23,9 @@
 
 /* Classes for down-sizing type without the semantics of h or small tags.
 * Useful in article footers, for example */
-.milli{
+.milli {
     @include font-size($milli-size);
 }
-.micro{
+.micro {
     @include font-size($micro-size);
 }
