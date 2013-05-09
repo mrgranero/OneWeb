@@ -1,0 +1,16 @@
+/* ==========================================================================
+   	JOOMLA MODULES
+   ========================================================================== */
+
+.module {
+	margin-bottom:$single-spacing-unit;
+
+	&:last-child {
+		margin: 0;
+	}
+
+	/* Remove default bullets on lists inside modules */
+	ul {
+		list-style-type: none;
+	}
+}

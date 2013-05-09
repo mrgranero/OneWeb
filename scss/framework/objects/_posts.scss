@@ -1,0 +1,18 @@
+/* ==========================================================================
+   	POSTS
+   ========================================================================== */
+
+/*
+ * The print / mail /edit links
+ */
+.actions{
+    @extend .nav;
+    text-align: right;
+}
+
+/*
+ * The article information
+ */
+.article-info {
+	@extend .muted;
+}
