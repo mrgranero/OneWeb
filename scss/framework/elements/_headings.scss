@@ -1,7 +1,7 @@
 
 /* ==========================================================================
-   HEADINGS
-============================================================================= */
+    HEADINGS
+   ========================================================================== */
 
 h1,
 .h3,
@@ -20,7 +20,7 @@ h6,
     text-rendering :optimizelegibility;
 }
 
-/* Heading sizes. */
+/* Heading sizes are set with a mixin to maintain vertical rhythm. */
 h1,
 .h1 {
     @include font-size($h1-size);

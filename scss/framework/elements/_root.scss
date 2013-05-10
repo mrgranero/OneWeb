@@ -1,10 +1,12 @@
 
 /* ==========================================================================
-   ROOT
-============================================================================= */
+    ROOT
+   ========================================================================== */
 
-/* Border-box *all the things*, as suggested in:
- * http:// paulirish.com/2012/box-sizing-border-box-ftw */
+/*
+ * Border-box *all the things*, as suggested in:
+ * http:// paulirish.com/2012/box-sizing-border-box-ftw
+ */
 
 * {
     &,
@@ -18,6 +20,7 @@
 /* Define the root elements styles. */
 html {
     font: #{$root-font-size}%/#{$root-line-height} $root-font-family;
+    font-weight: $root-font-weight;
     overflow-y: scroll;
     min-height: 100%;
     -webkit-overflow-scrolling: touch;
@@ -26,24 +29,23 @@ html {
 
 /* Style the body element. */
 body {
-    -moz-font-feature-settings:"liga=1, dlig=1";
-    -ms-font-feature-settings:"liga" 1, "dlig" 1;
-    -o-font-feature-settings:"liga" 1, "dlig" 1;
-    -webkit-font-feature-settings:"liga" 1, "dlig" 1;
-    font-feature-settings:"liga" 1, "dlig" 1;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga" 1, "dlig" 1;
+    -o-font-feature-settings: "liga" 1, "dlig" 1;
+    -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+    font-feature-settings: "liga" 1, "dlig" 1;
 	@include vendor(hyphens, auto);
 }
 
-
-/* Colour selected text */
+/* Colour selected text. */
  ::-moz-selection {
-    background-color: lighten($brand-color, 45%);
+    background-color: lighten($brand-color, 50%);
     color: $brand-color;
     text-shadow: none;
 }
 
 ::selection {
-    background-color: lighten($brand-color, 45%);
+    background-color: lighten($brand-color, 50%);
     color: $brand-color;
     text-shadow: none;
 }

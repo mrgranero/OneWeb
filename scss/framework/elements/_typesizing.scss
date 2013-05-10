@@ -1,10 +1,12 @@
 
 /* ==========================================================================
-   TYPE SIZING
-============================================================================= */
+   	TYPE SIZING
+   ========================================================================== */
 
-/* Classes for super-sizing type without the semantics of h tags. Useful in
- * page banners and the like */
+/*
+ * Classes for super-sizing type without the semantics of h tags. Useful in
+ * page banners and the like.
+ */
 .giga {
     @include font-size($giga-size);
 }
@@ -15,14 +17,18 @@
     @include font-size($kilo-size);
 }
 
-/* Makes introductory text, like the first paragraph of an article, a bit
-* bigger for added awesome */
+/*
+ * Makes introductory text, like the first paragraph of an article, a bit
+ * bigger for added awesome.
+ */
 .intro {
     @include font-size($h3-size);
 }
 
-/* Classes for down-sizing type without the semantics of h or small tags.
-* Useful in article footers, for example */
+/*
+ * Classes for down-sizing type without the semantics of h or small tags.
+ * Useful in article footers, for example.
+ */
 .milli {
     @include font-size($milli-size);
 }

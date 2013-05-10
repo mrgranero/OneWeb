@@ -2,19 +2,19 @@
 
 /* ==========================================================================
     FLUID TYPE
-============================================================================= */
+   ========================================================================== */
 
-/* Slowly increase root font size with viewport */
-html {
+	/* Slowly increase root font size with viewport */
+	html {
 
-	@include media-query(desk) {
-		font-size: 106.3%; // 17px
+		@include media-query(desk) {
+			font-size: $root-font-size * 1.063%; // 17px if the root was 16px
+		}
+
+		@include media-query(desk-wide) {
+			font-size: $root-font-size * 1.125%; // 18px if the root was 16px
+		}
+
 	}
-
-	@include media-query(desk-wide) {
-		font-size: 112.5%; // 18px
-	}
-
-}
 
 }//endif
