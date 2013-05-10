@@ -14,7 +14,6 @@
  * the font-size.
  */
 address,
-article,
 blockquote,
 dl,
 fieldset,
@@ -30,4 +29,8 @@ table,
 ul {
 	margin-top: 0;
 	margin-bottom: $single-spacing-unit;
+}
+
+article {
+	margin-bottom: $double-spacing-unit;
 }
