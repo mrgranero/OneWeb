@@ -1,0 +1,138 @@
+
+/*
+ * The following are global defaults, DON'T CHANGE THEM HERE!
+ *
+ * Override them in the UI template; /ui/_variables.scss like this:
+ *
+ * $serif-font-family: "Comic sans";
+ *
+ * or...
+ *
+ * $brand-color: #bada55;
+ *
+ */
+
+
+/* ==========================================================================
+    DEFAULT FONT STACKS
+   ========================================================================== */
+
+$sans-font-family:      Helvetica, "Helvetica Neue", sans-serif!default;
+$serif-font-family:     "Adobe Caslon Pro", Baskerville, Georgia, serif!default;
+$code-font-family:      Consolas, "Liberation Mono", Courier, monospace!default;
+
+/* ==========================================================================
+    ROOT RULES
+   ========================================================================== */
+
+/* Default font-size in %, equates to 1em or 16px */
+$root-font-size:        120!default;
+$root-line-height:      1.5!default;
+
+/* Default font-weight */
+$root-font-weight: 		300!default;
+
+/* Our font stacks */
+$root-font-family:      $serif-font-family!default;
+$button-font-family:    $sans-font-family!default;
+$heading-font-family:   $serif-font-family!default;
+
+/* Root element colours */
+$root-font-color:       rgb(52,52,52)!default;
+$root-background:       rgb(255,255,255)!default;
+
+/* Spacing units derived from line-height; they scale with root-font-size */
+$single-spacing-unit:   ($root-line-height / $root-font-size) * (100em);
+$half-spacing-unit:     ($root-line-height / $root-font-size) * (50em);
+$double-spacing-unit:   ($root-line-height / $root-font-size) * (200em);
+
+/* Constrain content widths to maintain an optimal measure (line-length) */
+$wrapper-max-width:     40em!default;
+
+
+/* ==========================================================================
+   	BRANDING
+   ========================================================================== */
+
+/* Default brand colour and font family */
+$brand-color:           rgb(31, 117, 204)!default;
+
+/* Default colour for objects’ borders, etc. */
+$brand-background:      rgb(249,249,249)!default;
+$brand-border:      	rgb(238,238,238)!default;
+
+/* Link colours */
+$link-color: 			$brand-color!default;
+$link-hover-color: 		darken($brand-color, 10%);
+
+/* The default size of rounded corners */
+$brand-round:           3px!default;
+
+
+/* ==========================================================================
+   	HEADINGS
+   ========================================================================== */
+
+/* Heading sizes specced in em.
+ * Don't spec them in px or % or things will break... horribly!
+ *
+ * Embrace ems. Free yourself.
+ */
+$h1-size:          	    3em!default;
+$h2-size:               2.25em!default;
+$h3-size:               1.5em!default;
+$h4-size:               1.3125em!default;
+$h5-size:               1.125em!default;
+$h6-size:               1em!default;
+
+/* Heading styles */
+$heading-font-weight:   300!default;
+
+
+/* ==========================================================================
+    TYPOGRAPHY
+   ========================================================================== */
+
+/* Type (up)sizing classes */
+$giga-size:             6em!default;
+$mega-size:             4.5em!default;
+$kilo-size:             3em!default;
+
+/* Type (down)sizing classes */
+$milli-size:            0.83em!default;
+$micro-size:            0.75em!default;
+
+/* Default quote marks. If you're French you'll want to change these. */
+$open-quote:            \201C;
+$close-quote:           \201D;
+
+
+/* ==========================================================================
+    DEFAULT BREAKPOINTS
+   ========================================================================== */
+
+$palm:                  20em!default;
+$lap:                   45em!default;
+$portable:              62em!default;
+$desk:                  90em!default;
+$desk-wide:             120em!default;
+
+
+/* ==========================================================================
+    OPTIONAL MODULES
+   ========================================================================== */
+
+/* Modules, disabled by default, can be enabled in ui/_variables.scss. */
+
+/* ENABLED FOR DEV - CHANGE THIS! */
+$use-rows:              true!default;
+$use-wrapper:           true!default;
+$use-grid:             	true!default;
+$use-fluid-type:       	true!default;
+$use-nav:               true!default;
+$use-pagination:        true!default;
+$use-breadcrumb:        true!default;
+$use-media:             true!default;
+$use-well:              true!default;
+$use-buttons:          	true!default;
+$use-labels:            true!default;
