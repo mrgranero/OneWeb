@@ -125,14 +125,14 @@ $desk-wide:             120em!default;
 /* Modules, disabled by default, can be enabled in ui/_variables.scss. */
 
 /* ENABLED FOR DEV - CHANGE THIS! */
-$use-rows:              true!default;
-$use-wrapper:           true!default;
-$use-grid:             	true!default;
-$use-fluid-type:       	true!default;
+$use-breadcrumb:        true!default;
+$use-buttons:           true!default;
+$use-fluid-type:        true!default;
+$use-grid:              true!default;
+$use-labels:            true!default;
+$use-media:             true!default;
 $use-nav:               true!default;
 $use-pagination:        true!default;
-$use-breadcrumb:        true!default;
-$use-media:             true!default;
-$use-well:              true!default;
-$use-buttons:          	true!default;
-$use-labels:            true!default;
+$use-rows:              true!default;
+$use-wells:             true!default;
+$use-wrapper:           true!default;
