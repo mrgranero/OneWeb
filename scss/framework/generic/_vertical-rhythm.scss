@@ -4,19 +4,29 @@
 ============================================================================= */
 
 /*
- * Apply consistent spacing, derived from the baseline height and default
- * font size, to generate a consistent vertical rhythm throughout the site.
+ * Applies consistent spacing, derived from the baseline height and default
+ * font size, to generate a consistent vertical rhythm throughout.
+ *
+ * Note:
+ *
+ * Any item which has its size already set with the font-size mixin, h1 - h6
+ * for example, already has a bottom-margin set with a value appropriate to
+ * the font-size.
  */
-
-/* Elements */
-h1,h2,h3,h4,h5,h6,hgroup,
-ul,ol,dl,
-blockquote,p,address,
-table,
+address,
+blockquote,
+dl,
+fieldset,
 figure,
-fieldset,form,legend,input,
+form,
+hgroup,
+input,
+ol,
+p,
 pre,
-small {
+small,
+table,
+ul {
 	margin-top: 0;
-	@include rhythm;
+	margin-bottom: $single-spacing-unit;
 }
