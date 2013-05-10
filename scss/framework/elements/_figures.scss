@@ -5,14 +5,14 @@
 
 figure {
 
-	img {
-		display: block;
-		margin-bottom: $half-spacing-unit;
-	}
-
 	figcaption {
 		@extend .milli;
 		@extend .muted;
 		display: block;
+	}
+
+	img {
+		display: block;
+		margin-bottom: $half-spacing-unit;
 	}
 }
