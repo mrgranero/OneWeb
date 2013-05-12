@@ -1,0 +1,24 @@
+@if $use-pagination == true {
+
+/* ==========================================================================
+    PAGINATION
+   ========================================================================== */
+
+    .pagination {
+        text-align:center;
+
+        > ul {
+            list-style-type: none;
+
+            > li {
+                display: inline-block;
+                padding:$half-spacing-unit;
+
+                > a {
+                    padding:$half-spacing-unit;
+                    margin:-$half-spacing-unit;
+                }
+            }
+        }
+    }
+}//endif
