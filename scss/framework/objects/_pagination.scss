@@ -4,21 +4,35 @@
     PAGINATION
    ========================================================================== */
 
+
+    /* Blog and article pagination */
     .pagination {
         text-align:center;
 
-        > ul {
+        ul {
             list-style-type: none;
 
-            > li {
+            li {
                 display: inline-block;
                 padding:$half-spacing-unit;
 
-                > a {
-                    padding:$half-spacing-unit;
-                    margin:-$half-spacing-unit;
-                }
             }
+        }
+    }
+
+    /* Article pagination */
+    ul.pagenav {
+        list-style-type: none;
+
+        li {
+            display: inline-block;
+            width: 50%;
+        }
+        .previous {
+            margin-right: -.25em;
+        }
+        .next {
+            text-align: right;
         }
     }
 }//endif
