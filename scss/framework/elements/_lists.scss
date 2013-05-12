@@ -17,11 +17,6 @@ dl {
 /* A little style maestro! */
 ul {
 	list-style-type: circle;
-
-	// except on Joomla's page nav.
-	&.pager {
-		list-style-type: none;
-	}
 }
 
 ol {
