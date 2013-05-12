@@ -46,6 +46,14 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
             </div>
         <?php endif; ?>
 
+        <?php if($this->countModules('breadcrumbs')) : ?>
+            <div class="breadcrumb-row">
+                <section>
+                   <jdoc:include type="modules" name="breadcrumbs" style="gangnam" />
+                </section>
+            </div>
+        <?php endif; ?>
+
         <?php if($this->countModules('above')) : ?>
             <div class="above-row">
                 <section>
