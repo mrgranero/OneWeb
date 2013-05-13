@@ -1,0 +1,16 @@
+@if $use-breadcrumbs == true{
+
+/* ==========================================================================
+    BREADCRUMBS
+   ======================================================================= */
+
+    .breadcrumb {
+        @extend .nav;
+
+        > li + li:before {
+            content:"\00BB" "\00A0";
+            padding-left: $half-spacing-unit/2;
+        }
+    }
+
+}//endif
