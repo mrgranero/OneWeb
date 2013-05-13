@@ -16,17 +16,29 @@ img[height] {
     max-width: none;
 }
 
-/* Image placement variations. */
+/*
+ * Image placement variations, used in Joomla's article image layouts.
+ *
+ * Of course, floated images typically need a margin so we extend the
+ * generic floatr classes here.
+ */
 .img-right {
-    float: right;
+    @extend .float-right;
     margin-left: $single-spacing-unit;
 }
+
 .img-left {
-    float: left;
+    @extend .float-left;
     margin-right: $single-spacing-unit;
 }
+
 .img-center {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* Joomla has no center option, using "none" instead. Go figure. */
+.img-none img {
+    @extend .img-center;
 }
