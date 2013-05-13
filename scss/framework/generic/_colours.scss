@@ -3,30 +3,31 @@
     COLOURS
    ========================================================================== */
 
-/* Bootstraps UI colours alll follow a predictable naming convention, so we
+/*
+ * Bootstrap's UI colours alll follow a predictable naming convention, so we
  * can colour buttons, labels, badges, etc. in one hit with the following
  * selectors. Nice.
  */
 
     [class*="-primary"] {
-        background-color: #428bca;
+        background-color: $brand-primary;
         color: #fff;
     }
 
     [class*="-success"] {
-        background-color: #5cb85c;
+        background-color: $brand-success;
         color: #fff;
     }
 
     [class*="-danger"] {
-        background-color: #d9534f;
+        background-color: $brand-danger;
         color: #fff;
     }
     [class*="-info"] {
-        background-color: #5bc0de;
+        background-color: $brand-info;
         color: #fff;
     }
     [class*="-warning"] {
-        background-color: #f0ad4e;
+        background-color: $brand-warning;
         color: #fff;
     }
