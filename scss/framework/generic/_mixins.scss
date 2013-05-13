@@ -3,7 +3,7 @@
     MIXINS
    ========================================================================== */
 
-/* Set appropriate line-height for elements when setting font-size. */
+/* Set an appropriate line-height for elements when setting font-size. */
 @mixin font-size($font-size) {
     font-size: $font-size;
     line-height: ceil($font-size / $root-line-height) * ($root-line-height / $font-size);
@@ -11,10 +11,7 @@
 
 }
 
-/* Vendor-prefix any property CSS in one go, e.g.
- *
- * `@include vendor(transition, all .2s linear);`
- */
+/* Vendor-prefix any CSS property in one go. */
 @mixin vendor($property, $value...) {
     -webkit-#{$property}: $value;
        -moz-#{$property}: $value;
@@ -23,7 +20,7 @@
             #{$property}: $value;
 }
 
-/* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack */
+/* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack. */
 @mixin clearfix {
 
     &:before,
@@ -36,7 +33,7 @@
     }
 }
 
-/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/* Hide elements visually, but leave available for screenreaders: h5bp.com/v */
 @mixin visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -48,7 +45,7 @@
     width: 1px;
 }
 
-/* Basic gradients */
+/* Basic horizontal gradients. */
 @mixin horizontal($startColor: $brand-color, $endColor: lighten($brand-color, 10%)) {
     background-color: $endColor;
     background-image: -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
@@ -59,7 +56,7 @@
     background-image: linear-gradient(left, $startColor, $endColor);                           // W3C
     background-repeat: repeat-x;
 }
-
+/* Basic vertical gradients. */
 @mixin vertical($startColor: $brand-color, $endColor: lighten($brand-color, 10%)) {
     background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
     background-image: -webkit-linear-gradient(top, $startColor, $endColor);                    // Safari 5.1+, Chrome 10+
@@ -71,9 +68,9 @@
     background-repeat: repeat-x;
 }
 
-/*
- * Media query mixin breakpoints are defined in the defaults file but you should overide them
- * in the template variables file.
+/* Media query mixin to add a defined breakpoint. The following breakpoints
+ * are defined in the defaults file but should be re-declared in
+ * ui/_variables.scss.
  *
  * palm
  * lap
