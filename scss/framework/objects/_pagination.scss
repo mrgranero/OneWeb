@@ -4,7 +4,6 @@
     PAGINATION
    ========================================================================== */
 
-
     /* Blog and article pagination */
     .pagination {
         text-align:center;
@@ -32,6 +31,7 @@
             margin-right: -.25em;
         }
         .next {
+            float: right;
             text-align: right;
         }
     }
