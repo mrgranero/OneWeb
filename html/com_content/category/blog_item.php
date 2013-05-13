@@ -48,7 +48,7 @@ $info = $this->item->params->get('info_block_position', 0);
 	<?php $useDefList = (($params->get('show_modify_date')) or ($params->get('show_publish_date'))
 		or ($params->get('show_hits'))); ?>
 	<?php if ($useDefList AND ($info == 0 OR $info == 2)) : ?>
-		<footer class="article-info">
+		<footer class="article-meta">
 			<ul>
 		<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 			<li class="createdby">
@@ -127,7 +127,7 @@ $info = $this->item->params->get('info_block_position', 0);
 	<?php echo $this->item->introtext; ?>
 
 	<?php if ($useDefList AND ($info == 1 OR $info == 2)) : ?>
-		<footer class="article-info">
+		<footer class="article-meta">
 			<ul>
 		<?php if ($info == 1) : ?>
 			<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>

@@ -60,7 +60,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 
 <?php if ($info == 0 OR $info == 2) : ?>
 	<footer>
-		<ul class="article-info">
+		<ul class="article-meta">
 			<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 				<li class="author">
 					<?php $author = $this->item->created_by_alias ? $this->item->created_by_alias : $this->item->author; ?>
@@ -153,7 +153,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	<?php echo $this->item->text; ?>
 	</div>
 	<?php if ($info == 1 OR $info == 2) : ?>
-		<footer class="article-info">
+		<footer class="article-meta">
 			<?php if ($info == 1): ?>
 				<ul>
 					<?php if ($params->get('show_parent_category') AND !empty($this->item->parent_slug)) : ?>
