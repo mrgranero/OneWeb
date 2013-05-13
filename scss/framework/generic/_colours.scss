@@ -1,0 +1,32 @@
+
+/* ==========================================================================
+    COLOURS
+   ========================================================================== */
+
+/* Bootstraps UI colours alll follow a predictable naming convention, so we
+ * can colour buttons, labels, badges, etc. in one hit with the following
+ * selectors. Nice.
+ */
+
+    [class*="-primary"] {
+        background-color: #428bca;
+        color: #fff;
+    }
+
+    [class*="-success"] {
+        background-color: #5cb85c;
+        color: #fff;
+    }
+
+    [class*="-danger"] {
+        background-color: #d9534f;
+        color: #fff;
+    }
+    [class*="-info"] {
+        background-color: #5bc0de;
+        color: #fff;
+    }
+    [class*="-warning"] {
+        background-color: #f0ad4e;
+        color: #fff;
+    }
