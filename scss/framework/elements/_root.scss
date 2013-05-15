@@ -17,35 +17,33 @@
 }
 
 
-/* Define the root elements styles. */
+/* Define the root element styles. */
 html {
     font: #{$root-font-size}%/#{$root-line-height} $root-font-family;
     font-weight: $root-font-weight;
-    overflow-y: scroll;
+    background-color: $root-background;
+    color: $root-font-color;
     min-height: 100%;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
 }
 
 
-/* Style the body element. */
+/* Style the body element styles. */
 body {
-    -moz-font-feature-settings: "liga=1, dlig=1";
-    -ms-font-feature-settings: "liga" 1, "dlig" 1;
-    -o-font-feature-settings: "liga" 1, "dlig" 1;
-    -webkit-font-feature-settings: "liga" 1, "dlig" 1;
-    font-feature-settings: "liga" 1, "dlig" 1;
 	@include vendor(hyphens, auto);
 }
 
 /* Colour selected text. */
  ::-moz-selection {
-    background-color: lighten($brand-color, 50%);
-    color: $brand-color;
+    background-color: $brand-color;
+    color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background-color: lighten($brand-color, 50%);
-    color: $brand-color;
+    background-color: $brand-color;
+    color: #fff;
     text-shadow: none;
 }
