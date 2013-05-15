@@ -8,7 +8,6 @@
  */
 
 defined('_JEXEC') or die;
-JHtml::_('bootstrap.tooltip');
 
 ?>
 
@@ -34,8 +33,8 @@ JHtml::_('bootstrap.tooltip');
 	// Find last and penultimate items in breadcrumbs list
 	end($list);
 	$last_item_key = key($list);
-	prev($list);
-	$penult_item_key = key($list);
+	//prev($list);
+	//$penult_item_key = key($list);
 
 	// Generate the trail
 	foreach ($list as $key => $item) :
