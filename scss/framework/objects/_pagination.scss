@@ -9,22 +9,19 @@
         text-align:center;
 
         ul {
-            list-style-type: none;
+            @extend .nav;
 
             li {
-                display: inline-block;
                 padding:$half-spacing-unit;
-
             }
         }
     }
 
     /* Article pagination */
-    ul.pagenav {
-        list-style-type: none;
+    .pagenav {
+        @extend .nav;
 
         li {
-            display: inline-block;
             width: 50%;
         }
         .previous {
