@@ -84,7 +84,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
             </div>
         <?php endif; ?>
 
-        <?php if($this->countModules('footer-menu') OR $this->countModules('content-info')) : ?>
+        <?php if($this->countModules('footer-menu') OR $this->countModules('contentinfo')) : ?>
             <div class="footer-row">
                     <footer role="contentinfo">
                         <?php if($this->countModules('footer-menu')) : ?>
@@ -93,7 +93,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
                             </nav>
                         <?php endif; ?>
                         <?php if($this->countModules('contentinfo')) : ?>
-                            <jdoc:include type="modules" name="content-info" style="gangnam" />
+                            <jdoc:include type="modules" name="contentinfo" style="gangnam" />
                         <?php endif; ?>
                     </footer>
                 </div>
