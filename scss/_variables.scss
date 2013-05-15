@@ -8,7 +8,7 @@ $use-breadcrumbs:       true;
 $use-buttons:           true;
 $use-colours:           true;
 $use-fluid-type:        true;
-$use-grid:              false;
+$use-grid:              true;
 $use-joomla-modules:    true;
 $use-labels:            true;
 $use-media:             true;
@@ -35,6 +35,9 @@ $use-wrapper:           true;
 //
 // $heading-font-weight: 600;
 //
+$sans-font-family: 		'Lato', sans-serif;
+$brand-color: #cd6e57;
+$root-font-weight:      300;
 
 /* ==========================================================================
    	CUSTOM VARIABLES
