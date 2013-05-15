@@ -1,10 +1,11 @@
+@if $use-colours == true {
 
 /* ==========================================================================
     COLOURS
    ========================================================================== */
 
 /*
- * Bootstrap's UI colours alll follow a predictable naming convention, so we
+ * Bootstrap's UI colours all follow a predictable naming convention, so we
  * can colour buttons, labels, badges, etc. in one hit with the following
  * selectors. Nice.
  */
@@ -31,3 +32,4 @@
         background-color: $brand-warning;
         color: #fff;
     }
+}//endif
