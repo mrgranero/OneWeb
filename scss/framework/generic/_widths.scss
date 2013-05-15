@@ -76,15 +76,13 @@
 
 @if $use-grid == true {
 
-/* Don't include the above widths if we are not using a grid */
+// Don't include the above widths if we are not using a grid!
     @include grid-setup();
 
-/*
- * This mixin generates namespaced width declarations at our breakpoints, so
- * that widths can be defined at each breakpoint. For example:
- *
- * <div class="lap-one-half  desk-one-quarter"> ... </div>
- */
+
+// This mixin generates namespaced width declarations at our breakpoints,
+// so that widths can be defined at each breakpoint. For example:
+// <div class="lap-one-half  desk-one-quarter"> ... </div>
     @include media-query(palm) {
         @include grid-setup("palm-");
     }
