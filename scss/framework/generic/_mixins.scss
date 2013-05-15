@@ -78,13 +78,18 @@
  * desk
  * desk-wide
  *
- * The active breakopoint size is appended as a class to the html element, for clarity.
+ * The active breakpoint size is also appended as a class to the html element,
+ * primarily to aid in the de-bugging of media-queries.
  *
  * Use the media query mixin like this:
  *
- * @include media-query(palm){
+ * @include media-query(desk) {
  *       your-styles-here;
  * }
+ *
+ * Please note, as this is a mobile-first framework the layout is mobile by
+ * default. Palm represents the first breakpoint encountered as screen size
+ * increases.
  */
 
 @mixin media-query($media-query) {
