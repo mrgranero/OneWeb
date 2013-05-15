@@ -1,0 +1,13 @@
+@if $use-well == true{
+
+/* ==========================================================================
+    WELLS
+   ========================================================================== */
+
+.well {
+	background: $brand-background;
+	border: 1px solid $brand-border;
+	@extend .rounded;
+}
+
+}//endif

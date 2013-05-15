@@ -1,0 +1,15 @@
+
+/* ==========================================================================
+    JOOMLA MODULES
+   ========================================================================== */
+
+/* The below-row modules */
+.below-row .module {
+
+	@extend .grid-item;
+	@include media-query(lap) {
+
+		padding-right: $single-spacing-unit;
+		@extend .lap-one-third;
+	}
+}

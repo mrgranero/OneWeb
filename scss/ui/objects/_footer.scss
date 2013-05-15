@@ -1,0 +1,19 @@
+
+/* ==========================================================================
+    FOOTER
+   ========================================================================== */
+
+.footer-row {
+	background: $brand-color;
+}
+
+.social {
+	@extend .nav;
+	@extend .nav-block;
+}
+
+.credit-row {
+	background: darken($brand-background, 78%);
+    text-align: center;
+    color: #fff;
+}
