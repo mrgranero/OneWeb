@@ -30,15 +30,15 @@ $root-font-size:        100!default;
 $root-line-height:      1.5!default;
 
 /* Our font stacks. */
-$root-font-family:      $serif-font-family!default;
+$root-font-family:      $sans-font-family!default;
 $button-font-family:    $sans-font-family!default;
-$heading-font-family:   $serif-font-family!default;
+$heading-font-family:   $sans-font-family!default;
 
 /* Default font-weight. */
-$root-font-weight:    300!default;
+$root-font-weight:      300!default;
 
 /* Root element colours. */
-$root-font-color:       rgb(52,52,52)!default;
+$root-font-color:       rgb(51,51,51)!default;
 $root-background:       rgb(255,255,255)!default;
 
 /* Spacing units derived from line-height; they scale with root-font-size. */
@@ -47,12 +47,12 @@ $half-spacing-unit:     ($root-line-height / $root-font-size) * (50em);
 $double-spacing-unit:   ($root-line-height / $root-font-size) * (200em);
 
 /* Constrain content widths to maintain an optimal measure (line-length). */
-$wrapper-max-width:     40em!default;
+$wrapper-max-width:     45em!default;
 
 
 /* ==========================================================================
-   BRANDING
-  ========================================================================== */
+    BRANDING
+   ========================================================================== */
 
 /* Default brand colour. */
 $brand-color:           rgb(31, 117, 204)!default;
@@ -134,6 +134,7 @@ $desk-wide:             120em!default;
 /* The following modules can be enabled in ui/_variables.scss if required. */
 $use-breadcrumbs:       false!default;
 $use-buttons:           false!default;
+$use-colours:           false!default;
 $use-fluid-type:        false!default;
 $use-grid:              false!default;
 $use-joomla-modules:    false!default;
