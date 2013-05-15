@@ -11,8 +11,8 @@
         ul {
             @extend .nav;
 
-            li {
-                padding:$half-spacing-unit;
+            span {
+                padding: $half-spacing-unit / 2;
             }
         }
     }
