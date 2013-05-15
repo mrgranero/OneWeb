@@ -34,4 +34,8 @@ ul {
 
 article {
 	margin-bottom: $double-spacing-unit;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
