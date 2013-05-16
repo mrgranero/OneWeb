@@ -41,6 +41,9 @@ $root-font-weight:      400!default;
 $root-font-color:       rgb(51,51,51)!default;
 $root-background:       rgb(255,255,255)!default;
 
+/* Also set a body background, to allow for faux footers. */
+$body-background:       rgb(255,255,255)!default;
+
 /* Spacing units derived from line-height; they scale with root-font-size. */
 $single-spacing-unit:   ($root-line-height / $root-font-size) * (100em);
 $half-spacing-unit:     ($root-line-height / $root-font-size) * (50em);
@@ -59,10 +62,10 @@ $brand-color:           rgb(31, 117, 204)!default;
 
 /* Default colour for objects and borders. */
 $brand-background:      rgb(240,240,240)!default;
-$brand-border:      	rgb(238,238,238)!default;
+$brand-border:          rgb(238,238,238)!default;
 
 /* Link colours. */
-$link-color: 			$brand-color!default;
+$link-color: 			$brand-color;
 $link-hover-color: 		darken($brand-color, 10%);
 
 /* The default size of rounded corners. */
@@ -112,8 +115,8 @@ $micro-size:            0.75em!default;
    ========================================================================== */
 
 /* Default quote marks. If you're French you'll want to change these. */
-$open-quote:            \201C;
-$close-quote:           \201D;
+$open-quote:            \201C!default;
+$close-quote:           \201D!default;
 
 
 /* ==========================================================================
