@@ -38,6 +38,12 @@ $use-wrapper:           true;
 $sans-font-family: 		'Lato', sans-serif;
 $brand-color: 			#cd6e57;
 $root-font-weight:      300;
+$heading-font-weight:   300;
+
+/* Sets the html background dark for a faux footer. */
+$root-background:      rgb(41,41,41);
+$body-background:      rgb(255,255,255)!default;
+
 
 /* ==========================================================================
    	CUSTOM VARIABLES
