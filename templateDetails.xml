@@ -55,7 +55,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="bootBloat" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_BOOTSTRAP_LABEL" description="TPL_ONEWEB_BOOTSTRAP_DESC">
+				<field name="bootBloatJS" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_BOOTSTRAP_LABEL" description="TPL_ONEWEB_BOOTSTRAP_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
