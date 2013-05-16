@@ -1,0 +1,23 @@
+
+/* ==========================================================================
+    TYPOGRAPHY
+   ========================================================================== */
+
+/* PARAGRAPHS */
+/* First paragraph of an article, bigger for added awesome. */
+p:first-of-type {
+    @include font-size($h4-size);
+}
+
+/* BLOCK QUOTES */
+/* Borders are nice, sometimes. */
+blockquote {
+    border-left: 4px solid lighten($brand-color, 10%);
+}
+
+/* EMPHATIC ELEMENTS */
+/* We reset the root font size to 300, so better wind down boldness. */
+b,
+strong {
+    font-weight: 400;
+}
