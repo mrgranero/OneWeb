@@ -9,4 +9,12 @@
 		padding: $single-spacing-unit;
 	}
 
+	/* Extra padding to the main-row, in case breadcrumb-row isn't there. */
+	.breadcrumb-row {
+		padding-bottom: 0;
+	}
+	.main-row {
+		padding-top: $double-spacing-unit;
+	}
+
 }//endif
