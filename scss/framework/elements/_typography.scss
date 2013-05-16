@@ -43,6 +43,22 @@ blockquote {
     p:last-of-type {
         margin-bottom: 0;
     }
+
+    > cite {
+        margin-bottom: 0;
+    }
+}
+
+/* CITATIONS */
+cite {
+    @extend .milli;
+    display: block;
+    margin-top: $half-spacing-unit;
+
+    &:before {
+        content: "\2014";
+        margin-right: $half-spacing-unit;
+    }
 }
 
 /* INLINE QUOTES */
@@ -68,22 +84,4 @@ q {
 abbr {
     font-variant: small-caps;
     letter-spacing: 0.1em;
-}
-
-/* CITATIONS */
-cite {
-    @extend .milli;
-    display: block;
-    margin-top: $half-spacing-unit;
-
-    &:before {
-        content: "\2014";
-        margin-right: $half-spacing-unit;
-    }
-}
-
-/* EMPHATIC ELEMENTS */
-b,
-strong {
-    font-weight: 400;
 }
