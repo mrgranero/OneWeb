@@ -74,7 +74,7 @@ if ( !$loadMoo ) {
     unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
 }
 // Self explanatory
-if ( !$bootBloat ) {
+if ( !$bootBloatJS ) {
   unset($doc->_scripts[$this->baseurl.'media/jui/js/jquery.min.js']);
   unset($doc->_scripts[$this->baseurl.'media/jui/js/jquery-noconflict.js']);
   unset($doc->_scripts[$this->baseurl.'media/jui/js/bootstrap.min.js']);
