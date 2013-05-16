@@ -9,7 +9,6 @@
 	<copyright>Copyright (C) 2013 Internet Inspired. All rights reserved.</copyright>
 	<description>TPL_ONEWEB_XML_DESCRIPTION</description>
 	<files>
-        <filename>favicon.ico</filename>
         <filename>apple-touch-icon.png</filename>
         <filename>apple-touch-icon-57x57-precomposed.png</filename>
         <filename>apple-touch-icon-72x72-precomposed.png</filename>
@@ -24,6 +23,7 @@
 		<folder>html</folder>
 		<folder>images</folder>
 		<folder>js</folder>
+		<folder>scss</folder>
 	</files>
 	<positions>
 		<position>menu</position>
