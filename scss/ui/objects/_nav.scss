@@ -2,9 +2,11 @@
     HEADER NAV
    ========================================================================== */
 
+/* MAIN NAVIGATION */
 [role="navigation"] {
 
-@extend .grid-item;
+	@extend .grid-item;
+	font-weight: 400;
 
 	ul {
 
