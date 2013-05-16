@@ -5,4 +5,4 @@ This is a ground-up re-write of Oneweb, and it isn't ready yet. I strongly recom
 ## Todo
 * Add a template preview image
 * Update touch icons
-* Check compilked output, again.
+* Check compiled output, again.
