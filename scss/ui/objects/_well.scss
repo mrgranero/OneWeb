@@ -5,9 +5,10 @@
    ========================================================================== */
 
 .well {
+	@extend .rounded;
 	background: $brand-background;
 	border: 1px solid $brand-border;
-	@extend .rounded;
+	padding: $single-spacing-unit;
 }
 
 }//endif
