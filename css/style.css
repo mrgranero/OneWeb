@@ -517,10 +517,10 @@ table {
     HELPER CLASSES
    ========================================================================== */
 /* Clearfix the parent of floated elements tp prevent it collapsing */
-.clearfix:before, .media:before, .clearfix:after, .media:after {
+.clearfix:before, .media:before, .well:before, .below-row .module .module-inner:before, .clearfix:after, .media:after, .well:after, .below-row .module .module-inner:after {
   content: "";
   display: table; }
-.clearfix:after, .media:after {
+.clearfix:after, .media:after, .well:after, .below-row .module .module-inner:after {
   clear: both; }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
@@ -1697,6 +1697,13 @@ abbr {
   padding-top: 3.236em; }
 
 /* ==========================================================================
+    WELLS
+   ========================================================================== */
+.well, .below-row .module .module-inner {
+  display: block;
+  padding: 1.618em; }
+
+/* ==========================================================================
     CONTENT WRAPPER
    ========================================================================== */
 [class*="-row"] > section,
@@ -1973,5 +1980,4 @@ of adding icon classes in our markup. It's more awesome. */
    ========================================================================== */
 .well, .below-row .module .module-inner {
   background: #f0f0f0;
-  border: 1px solid #eeeeee;
-  padding: 1.618em; }
+  border: 1px solid #eeeeee; }
