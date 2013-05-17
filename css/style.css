@@ -1774,7 +1774,7 @@ a.to-top {
    ========================================================================== */
 /* PARAGRAPHS */
 /* First paragraph of an article, bigger for added awesome. */
-p:first-of-type {
+article p:first-of-type {
   font-size: 1.3125em;
   line-height: 1.23276;
   margin: 0 0 1.23276em 0; }
