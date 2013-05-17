@@ -1004,9 +1004,9 @@ td {
  *
  * http://v1.jontangerine.com/silo/typography/p/
  */
-p {
+article p {
   font-variant-numeric: oldstyle-nums; }
-  p + p {
+  article p + p {
     text-indent: 1em; }
 
 /* BLOCK QUOTES */
