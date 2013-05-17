@@ -31,12 +31,8 @@
 
 
 /* Ethereal items like mixins, and helpers like float or clearfix. */
-
-@import "generic/grid";
 @import "generic/helper";
-
 @import "generic/vertical-rhythm";
-@import "generic/widths";
 
 /*
  * The following rules contain generic styles of the type applicable primarily
@@ -77,7 +73,12 @@
 @import "objects/wrapper";
 
 /*
- * These need to override default styles for objects like buttons,
- * badges and labels, so we'll load them last.
+ * These following need to override some base element styles,
+ * so we'll load them last.
  */
+
+/* Override default styles for buttons, badges and labels. */
 @import "generic/colours";
+/* Override any defaults like display: block on objects. */
+@import "generic/grid";
+@import "generic/widths";
