@@ -63,7 +63,7 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="frontpage" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_FRONTPAGE_LABEL" description="TPL_ONEWEB_FRONTPAGE_DESC">
+				<field name="frontpage" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_FRONTPAGE_LABEL" description="TPL_ONEWEB_FRONTPAGE_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
