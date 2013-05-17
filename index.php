@@ -62,7 +62,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
             </div>
         <?php endif; ?>
 
-        <?php if($siteHome != 'home' or ($frontpage == 1)) : ?>
+        <?php if($siteHome != 'home' or ($frontpage == 0)) : ?>
         <div class="main-row">
             <section>
                 <main role="main">
