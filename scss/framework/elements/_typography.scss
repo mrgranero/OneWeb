@@ -19,7 +19,7 @@
  * http://v1.jontangerine.com/silo/typography/p/
  */
 
-article p {
+.article p {
     font-variant-numeric: oldstyle-nums; // This doesn't work yet, but one day soon I hope it will!
 
     + p {

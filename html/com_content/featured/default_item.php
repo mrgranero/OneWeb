@@ -18,7 +18,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 <?php if ($this->item->state == 0) : ?>
 <div class="system-unpublished">
 <?php endif; ?>
-<article>
+<article class="article">
 	<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
 			<ul class="actions">
 				<?php if ($params->get('show_print_icon')) : ?>

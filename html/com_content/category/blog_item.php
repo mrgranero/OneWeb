@@ -16,7 +16,7 @@ $canEdit = $this->item->params->get('access-edit');
 JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 $info = $this->item->params->get('info_block_position', 0);
 ?>
-<article>
+<article class="article">
 	<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
 			<ul class="actions">
 				<?php if ($params->get('show_print_icon')) : ?>
