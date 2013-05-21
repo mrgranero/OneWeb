@@ -1141,7 +1141,10 @@ abbr {
     JOOMLA MODULES
    ========================================================================== */
 .module {
+  /* Make alll modules capable of being gridded! */
+  /* Give modules some breating space. */
   margin-bottom: 1.618em;
+  /* But remove it from the last one. */
   /* Remove default bullets on lists inside modules */ }
   .module:last-child {
     margin-bottom: 0; }
