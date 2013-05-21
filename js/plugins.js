@@ -32,23 +32,23 @@ window.log = function(){
       var resizer = function() {
 
           if ($(window).width() > 319) {
-              $("html").removeClass("device-dumb").removeClass("device-lap").addClass("device-palm");
+              $("html").removeClass("dumb").removeClass("lap").addClass("palm");
           }
 
-          if ($(window).width() > 599) {
-              $("html").removeClass("device-palm").removeClass("device-portable").addClass("device-lap");
-          }
-
-          if ($(window).width() > 767) {
-              $("html").removeClass("device-lap").removeClass("device-desk").addClass("device-portable");
+          if ($(window).width() > 719) {
+              $("html").removeClass("palm").removeClass("portable").addClass("lap");
           }
 
           if ($(window).width() > 991) {
-              $("html").removeClass("device-portable").removeClass("device-desk-wide").addClass("device-desk");
+              $("html").removeClass("lap").removeClass("desk").addClass("portable");
           }
 
-          if ($(window).width() > 1381) {
-              $("html").removeClass("device-desk").addClass("device-desk-wide");
+          if ($(window).width() > 1439) {
+              $("html").removeClass("portable").removeClass("desk-wide").addClass("desk");
+          }
+
+          if ($(window).width() > 1919) {
+              $("html").removeClass("desk").addClass("desk-wide");
           }
 
       };
