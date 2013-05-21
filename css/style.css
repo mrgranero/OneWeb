@@ -551,11 +551,10 @@ table {
   border-radius: 3px; }
 
 /* Add/remove floats */
-.float-right, .img-right, .media .media-object-right {
+.float-right, .img-right, .media > .object-right {
   float: right; }
 
-.float-left, .img-left, .media img,
-.media .media-object {
+.float-left, .img-left, .media > .object {
   float: left; }
 
 .float-none {
@@ -849,11 +848,10 @@ img[height] {
  * Of course, floated images typically need a margin so we extend the
  * generic floatr classes here.
  */
-.img-right, .media .media-object-right {
+.img-right, .media > .object-right {
   margin-left: 1.618em; }
 
-.img-left, .media img,
-.media .media-object {
+.img-left, .media > .object {
   margin-right: 1.618em; }
 
 .img-center, .img-none img {
@@ -1147,7 +1145,7 @@ abbr {
  *
  * To reverse this pattern, simply use .media-object-right.
  */
-.media .media-object-right {
+.media > .object-right {
   margin-right: 0; }
 
 /* ==========================================================================

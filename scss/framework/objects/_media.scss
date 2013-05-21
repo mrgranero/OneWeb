@@ -17,12 +17,11 @@
     .media {
         @extend .clearfix;
 
-        img,
-        .media-object {
+        > .object {
             @extend .img-left;
         }
 
-        .media-object-right {
+        > .object-right {
             @extend .img-right;
             margin-right: 0;
         }
