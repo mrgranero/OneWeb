@@ -7,7 +7,8 @@
 @mixin font-size($font-size) {
     font-size: $font-size;
     line-height: ceil($font-size / $root-line-height) * ($root-line-height / $font-size);
-    margin: 0 0 ($root-line-height / $font-size) *1em +em 0;
+    margin-top: 0;
+    margin-bottom: ($root-line-height / $font-size) *1em +em;
 
 }
 

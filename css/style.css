@@ -791,37 +791,43 @@ h1,
 .h1 {
   font-size: 3em;
   line-height: 1.07867;
-  margin: 0 0 0.53933em 0; }
+  margin-top: 0;
+  margin-bottom: 0.53933em; }
 
 h2,
 .h2 {
   font-size: 2.25em;
   line-height: 1.43822;
-  margin: 0 0 0.71911em 0; }
+  margin-top: 0;
+  margin-bottom: 0.71911em; }
 
 h3,
 .h3 {
   font-size: 1.5em;
   line-height: 1.07867;
-  margin: 0 0 1.07867em 0; }
+  margin-top: 0;
+  margin-bottom: 1.07867em; }
 
 h4,
 .h4 {
   font-size: 1.3125em;
   line-height: 1.23276;
-  margin: 0 0 1.23276em 0; }
+  margin-top: 0;
+  margin-bottom: 1.23276em; }
 
 h5,
 .h5 {
   font-size: 1.125em;
   line-height: 1.43822;
-  margin: 0 0 1.43822em 0; }
+  margin-top: 0;
+  margin-bottom: 1.43822em; }
 
 h6,
 .h6 {
   font-size: 1em;
   line-height: 1.618;
-  margin: 0 0 1.618em 0; }
+  margin-top: 0;
+  margin-bottom: 1.618em; }
 
 /* ==========================================================================
     IMAGES
@@ -955,17 +961,20 @@ td {
 .giga {
   font-size: 6em;
   line-height: 1.07867;
-  margin: 0 0 0.26967em 0; }
+  margin-top: 0;
+  margin-bottom: 0.26967em; }
 
 .mega {
   font-size: 4.5em;
   line-height: 1.07867;
-  margin: 0 0 0.35956em 0; }
+  margin-top: 0;
+  margin-bottom: 0.35956em; }
 
 .kilo, .logo {
   font-size: 3em;
   line-height: 1.07867;
-  margin: 0 0 0.53933em 0; }
+  margin-top: 0;
+  margin-bottom: 0.53933em; }
 
 /*
  * Makes introductory text, like the first paragraph of an article, a bit
@@ -974,7 +983,8 @@ td {
 .intro {
   font-size: 1.5em;
   line-height: 1.07867;
-  margin: 0 0 1.07867em 0; }
+  margin-top: 0;
+  margin-bottom: 1.07867em; }
 
 /*
  * Classes for down-sizing type without the semantics of h or small tags.
@@ -983,12 +993,14 @@ td {
 .milli, figure figcaption, cite {
   font-size: 0.83em;
   line-height: 1.9494;
-  margin: 0 0 1.9494em 0; }
+  margin-top: 0;
+  margin-bottom: 1.9494em; }
 
 .micro {
   font-size: 0.75em;
   line-height: 2.15733;
-  margin: 0 0 2.15733em 0; }
+  margin-top: 0;
+  margin-bottom: 2.15733em; }
 
 /* ==========================================================================
     TYPOGRAPHY
@@ -1777,7 +1789,8 @@ a.to-top {
 article p:first-of-type {
   font-size: 1.3125em;
   line-height: 1.23276;
-  margin: 0 0 1.23276em 0; }
+  margin-top: 0;
+  margin-bottom: 1.23276em; }
 
 /* BLOCK QUOTES */
 /* Borders are nice, sometimes. */
@@ -1980,7 +1993,8 @@ of adding icon classes in our markup. It's more awesome. */
 .actions {
   font-size: 0.83em;
   line-height: 1.9494;
-  margin: 0 0 1.9494em 0;
+  margin-top: 0;
+  margin-bottom: 1.9494em;
   margin-top: 0;
   text-align: right; }
 
@@ -1991,7 +2005,8 @@ of adding icon classes in our markup. It's more awesome. */
 .article-meta {
   font-size: 0.83em;
   line-height: 1.9494;
-  margin: 0 0 1.9494em 0; }
+  margin-top: 0;
+  margin-bottom: 1.9494em; }
 
 /* ==========================================================================
     WELLS
