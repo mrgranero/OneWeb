@@ -1160,7 +1160,7 @@ abbr {
   .nav li, .breadcrumb li, .pagination ul li, .pagenav li, .social li, .actions li {
     display: inline-block; }
     .nav li a, .breadcrumb li a, .pagination ul li a, .pagenav li a, .social li a, .actions li a {
-      padding: 0.20225em 0.4045em; }
+      padding: 0.20225em; }
 
 /* Creates a vertical list of blocky, finger-friendly, links. */
 .nav-stacked li,
