@@ -44,7 +44,8 @@ blockquote {
         margin-bottom: 0;
     }
 
-    > cite {
+    > cite,
+    + cite {
         margin-bottom: 0;
     }
 }

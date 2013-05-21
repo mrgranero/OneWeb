@@ -1022,7 +1022,8 @@ blockquote {
     content: none; }
   blockquote p:last-of-type {
     margin-bottom: 0; }
-  blockquote > cite {
+  blockquote > cite,
+  blockquote + cite {
     margin-bottom: 0; }
 
 /* CITATIONS */
