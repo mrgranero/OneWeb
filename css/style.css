@@ -592,10 +592,13 @@ ul {
   margin-top: 0;
   margin-bottom: 1.618em; }
 
+/* Some extra space for our articles. */
 article {
-  margin-bottom: 3.236em; }
-  article:last-child {
-    margin-bottom: 0; }
+  margin-bottom: 4.854em; }
+
+/* remove this for the last intro article in a blog layout. */
+.intro-articles article:last-child {
+  margin-bottom: 1.618em; }
 
 /*
  * The following rules contain generic styles of the type applicable primarily
@@ -1185,13 +1188,6 @@ abbr {
 /* Gives the sections some breathing space */
 [class*="-row"] {
   padding: 1.618em; }
-
-/* Extra padding to the main-row, in case breadcrumb-row isn't there. */
-.breadcrumb-row {
-  padding-bottom: 0; }
-
-.main-row {
-  padding-top: 3.236em; }
 
 /* ==========================================================================
     WELLS
@@ -1957,6 +1953,22 @@ of adding icon classes in our markup. It's more awesome. */
   text-align: center;
   color: #fff; }
 
+/* ==========================================================================
+	ROW STYLES
+   ========================================================================== */
+/* Extra padding to the main-row, in case breadcrumb-row isn't there. *
+.breadcrumb-row {
+	padding-bottom: 0;
+}
+.main-row {
+	padding-top: $double-spacing-unit;
+}
+*/
+/* Give selected content rows some breathing space */
+@media only screen and (min-width: 62em) {
+  .above-row,
+  .main-row {
+    padding: 3.236em 1.618em; } }
 /* ==========================================================================
     ARTICLE ACTIONS
    ========================================================================== */

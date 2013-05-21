@@ -32,10 +32,11 @@ ul {
 	margin-bottom: $single-spacing-unit;
 }
 
+/* Some extra space for our articles. */
 article {
-	margin-bottom: $double-spacing-unit;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
+	margin-bottom: $single-spacing-unit*3;
+}
+/* remove this for the last intro article in a blog layout. */
+.intro-articles article:last-child {
+		margin-bottom: $single-spacing-unit;
 }
