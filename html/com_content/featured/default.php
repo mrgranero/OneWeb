@@ -1,14 +1,14 @@
 <?php
- 
+
  /* =====================================================================
-Template:	OneWeb for Joomla 2.5						            
-Author: 	Seth Warburton - Internet Inspired! - @nternetinspired 				            
-Version: 	2.0 											             
-Created: 	June 2012                                                    
-Copyright:	Seth Warburton - (C) 2012 - All rights reserved		
+Template:	OneWeb for Joomla 2.5
+Author: 	Seth Warburton - Internet Inspired! - @nternetinspired
+Version: 	2.0
+Created: 	June 2012
+Copyright:	Seth Warburton - (C) 2012 - All rights reserved
 License:	GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
 			DBAD License http://philsturgeon.co.uk/code/dbad-license
-Source: 	J2.5.1. com_content/views/							             		
+Source: 	J2.5.1. com_content/views/
 /* ===================================================================== */
 
 // no direct access
@@ -21,7 +21,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 	<h1>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h1>
-</header>    
+</header>
 <?php endif; ?>
 <?php $leadingcount=0 ; ?>
 <?php if (!empty($this->lead_items)) : ?>
@@ -64,7 +64,7 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 	</section>
 <?php endif; ?>
 
-<?php if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && $this->pagination->get('pages.total') > 1)) : ?>
+<?php if ($this->params->def('show_pagination', 2) == 1  || ($this->params->get('show_pagination') == 2 && !empty($this->pagination->pagesTotal))) : ?>
 	<section class="pagination">
 
 		<?php if ($this->params->def('show_pagination_results', 1)) : ?>
