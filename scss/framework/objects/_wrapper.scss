@@ -4,16 +4,11 @@
     CONTENT WRAPPER
    ========================================================================== */
 
-[class*="-row"] {
+    .wrapper {
 
-	> {
-		section,
-		header,
-		footer {
-    		margin: 0 auto;
-    		max-width: $wrapper-max-width;
-    	}
+        margin: 0 auto;
+        max-width: $wrapper-max-width;
+
     }
-}
 
 }//endif
