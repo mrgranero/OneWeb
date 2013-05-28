@@ -20,13 +20,16 @@ fieldset,
 figure,
 form,
 hgroup,
-input,
 .media,
+meter,
 ol,
 p,
 pre,
+progress,
+select,
 small,
 table,
+textarea,
 ul {
 	margin-top: 0;
 	margin-bottom: $single-spacing-unit;
@@ -38,5 +41,5 @@ article {
 }
 /* remove this for the last intro article in a blog layout. */
 .intro-articles article:last-child {
-		margin-bottom: $single-spacing-unit;
+	margin-bottom: $single-spacing-unit;
 }
