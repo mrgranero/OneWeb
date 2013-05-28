@@ -54,8 +54,8 @@ $info    = $this->item->params->get('info_block_position', 0);
 	<?php if ($this->item->state == 0): ?>
 		<div class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></div>
 	<?php endif; ?>
-	<?php if ($useDefList AND ($info == 0 OR $info == 2)) : ?>
-		<footer>
+	<?php if ($info == 0 OR $info == 2) : ?>
+		<footer class="article-meta">
 			<ul>
 		<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 			<li class="createdby">
@@ -121,7 +121,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 
 	<div class="article-body">
 		<?php echo $this->item->introtext; ?>
-		<?php if ($useDefList AND ($info == 1 OR $info == 2)) : ?>
+		<?php if ($info == 1 OR $info == 2) : ?>
 			<footer>
 				<h1><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></h1>
 				<?php if ($info == 1): ?>
