@@ -3,12 +3,7 @@
     FORMS
    ========================================================================== */
 
-/* Remove default fieldset styles. */
-fieldset {
-    border: 0;
-    padding: 0;
-}
-
+/* Some form basics. */
 form {
 
     input,
@@ -19,13 +14,21 @@ form {
 
     ul {
         list-style-type: none;
+        margin-bottom: 0;
     }
 }
 
+/* Remove default fieldset styles. */
+fieldset {
+    border: 1px solid $brand-border;
+    border-radius: $brand-round;
+    padding: $single-spacing-unit;
+}
+
 input,
-label,
 textarea {
     display: block;
+    margin-bottom: $half-spacing-unit;
 }
 
 input[type="text"],
@@ -46,9 +49,6 @@ textarea {
     border:1px solid $brand-border;
     padding: $half-spacing-unit*.5;
     @include vendor(border-radius, $brand-round);
-    -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px inset;
-    -moz-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px inset;
-    box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px inset;
 
     &:focus {
         border: 1px solid darken($brand-border, 10%);
@@ -60,4 +60,28 @@ textarea {
 /* Allow only vertical resizing of textareas. */
 textarea {
     resize: vertical;
+}
+
+/* Make checkboxes and radio buttons display inline. */
+label {
+    display: inline-block;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    margin-left: $half-spacing-unit/2;
+    margin-right: $half-spacing-unit/2;
+}
+
+select{
+    width: 100%;
+    height: 2em;
+    border:1px solid $brand-border;
+}
+
+progress,
+meter {
+    display: block;
+    width: 100%;
+    height: $single-spacing-unit;
 }
