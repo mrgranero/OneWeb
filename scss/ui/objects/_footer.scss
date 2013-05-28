@@ -7,13 +7,30 @@
 	background: $brand-color;
 }
 
-.social {
-	@extend .nav;
-	@extend .nav-block;
-}
-
 .credit-row {
 	background: darken($brand-background, 78%);
     text-align: center;
     color: #fff;
+}
+
+/* social icons */
+.social {
+	@extend .grid-item;
+	@extend .nav;
+
+	@include media-query(lap) {
+		@extend .lap-two-thirds;
+		margin-bottom: 0;
+		text-align: left;
+	}
+}
+/* social icons */
+.copyright {
+	@extend .grid-item;
+	font-weight: 400;
+
+	@include media-query(lap) {
+		@extend .lap-one-third;
+		text-align: right;
+	}
 }
