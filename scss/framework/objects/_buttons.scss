@@ -3,27 +3,18 @@
 /* ==========================================================================
     BUTTONS
    ========================================================================== */
-
-/*
- * Default button styles.
- *
- * Using a class attribute selector ensures that any object containing the btn
- * class will match this rule. This means that, ulike Bootstrap for example,
- * you don't need class="btn btn-danger" to creat a danger button, you can just
- * use class="btn-danger" instead.
- *
- * This works because the default colour sets also use the same type of class
- * attribute selector, so [class*="-danger"] applies to buttons, labels, badges
- * or anything else you suffixed that way, e.g., class="figure-danger".
- */
-    [class*="btn"] {
+    .btn,
+    [class*="btn-"] {
         background-color: $brand-background;
+        border: 1px solid transparent;
         border-radius: $brand-round;
         cursor: pointer;
         display: inline-block;
         font-size: 100%;
         font-family: $button-font-family;
+        font-weight: 400;
         line-height: 3;
+        margin-right: $half-spacing-unit/2;
         padding: 0 1em;
         vertical-align: middle;
         white-space: nowrap;
@@ -39,9 +30,7 @@
         }
     }
 
-    /*
-     * BUTTON SIZING
-     */
+    /* BUTTON SIZING */
     .btn-small {
         line-height: 2;
         padding: 0 0.5em;
