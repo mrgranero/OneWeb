@@ -3,11 +3,6 @@
     BANNER
    ========================================================================== */
 
-[role="banner"],
-[role="banner"] a {
-
-}
-
 .banner-row {
 
 	background: url(../images/tundra.jpg) center center;
@@ -19,7 +14,15 @@
 		color: #fff;
 	}
 
+	/* The download button */
+	.download {
+		@extend .btn;
+	}
+
 	@include media-query(lap) {
 		padding: $double-spacing-unit*1.5 $single-spacing-unit;
 	}
 }
+
+
+
