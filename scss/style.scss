@@ -75,7 +75,6 @@
    ========================================================================== */
 
 // ELEMENTS:
-@import "ui/elements/headings";
 @import "ui/elements/links";
 @import "ui/elements/typography";
 
@@ -87,7 +86,8 @@
 @import "ui/objects/banner";
 @import "ui/objects/icons";
 @import "ui/objects/logo";
-@import "ui/objects/modules";
+@import "ui/objects/above-row-modules";
+@import "ui/objects/below-row-modules";
 @import "ui/objects/header";
 @import "ui/objects/nav";
 @import "ui/objects/footer";

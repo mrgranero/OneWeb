@@ -371,7 +371,7 @@ figure {
  * Define consistent border, margin, and padding.
  */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
@@ -508,10 +508,13 @@ table {
     HELPER CLASSES
    ========================================================================== */
 /* Clearfix the parent of floated elements tp prevent it collapsing */
-.clearfix:before, .media:before, .well:before, .below-row .module .module-inner:before, .clearfix:after, .media:after, .well:after, .below-row .module .module-inner:after {
+.clearfix:before, .media:before,
+.media-content:before, .well:before, .clearfix:after, .media:after,
+.media-content:after, .well:after {
   content: "";
   display: table; }
-.clearfix:after, .media:after, .well:after, .below-row .module .module-inner:after {
+.clearfix:after, .media:after,
+.media-content:after, .well:after {
   clear: both; }
 
 /* Hide only visually, but have it available for screenreaders: h5bp.com/v */
@@ -539,11 +542,11 @@ table {
 
 /* Mute an object by reducing its opacity. */
 .muted, figure figcaption, .article-meta {
-  filter: alpha(opacity=50) !important;
-  opacity: 0.5!important; }
+  filter: alpha(opacity=70) !important;
+  opacity: 0.7 !important; }
 
 /* Round the borders of an object */
-.rounded, .well, .below-row .module .module-inner {
+.rounded, .well {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -551,10 +554,12 @@ table {
   border-radius: 3px; }
 
 /* Add/remove floats */
-.float-right, .img-right, .media > .object-right {
+.float-right, .img-right, .media .media-object-right,
+.media-content .media-object-right {
   float: right; }
 
-.float-left, .img-left, .media > .object {
+.float-left, .img-left, .media .media-object,
+.media-content .media-object {
   float: left; }
 
 .float-none {
@@ -580,13 +585,16 @@ fieldset,
 figure,
 form,
 hgroup,
-input,
 .media,
+meter,
 ol,
 p,
 pre,
+progress,
+select,
 small,
 table,
+textarea,
 ul {
   margin-top: 0;
   margin-bottom: 1.618em; }
@@ -656,10 +664,10 @@ body {
 /* Slowly increase root font size with viewport */
 @media only screen and (min-width: 90em) {
   html {
-    font-size: 112.5%; } }
+    font-size: 106.3%; } }
 @media only screen and (min-width: 120em) {
   html {
-    font-size: 125%; } }
+    font-size: 112.5%; } }
 
 /* ==========================================================================
    	CODE
@@ -693,11 +701,7 @@ figure {
 /* ==========================================================================
     FORMS
    ========================================================================== */
-/* Remove default fieldset styles. */
-fieldset {
-  border: 0;
-  padding: 0; }
-
+/* Some form basics. */
 form input,
 form select,
 form textarea {
@@ -707,12 +711,19 @@ form textarea {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
 form ul {
-  list-style-type: none; }
+  list-style-type: none;
+  margin-bottom: 0; }
+
+/* Remove default fieldset styles. */
+fieldset {
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  padding: 1.618em; }
 
 input,
-label,
 textarea {
-  display: block; }
+  display: block;
+  margin-bottom: 0.809em; }
 
 input[type="text"],
 input[type="email"],
@@ -735,10 +746,7 @@ textarea {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px inset;
-  -moz-box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px inset;
-  box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px inset; }
+  border-radius: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="search"]:focus,
@@ -760,6 +768,27 @@ textarea {
 /* Allow only vertical resizing of textareas. */
 textarea {
   resize: vertical; }
+
+/* Make checkboxes and radio buttons display inline. */
+label {
+  display: inline-block; }
+
+input[type="radio"],
+input[type="checkbox"] {
+  display: inline-block;
+  margin-left: 0.4045em;
+  margin-right: 0.4045em; }
+
+select {
+  width: 100%;
+  height: 2em;
+  border: 1px solid #eeeeee; }
+
+progress,
+meter {
+  display: block;
+  width: 100%;
+  height: 1.618em; }
 
 /* ==========================================================================
     HEADINGS
@@ -848,10 +877,12 @@ img[height] {
  * Of course, floated images typically need a margin so we extend the
  * generic floatr classes here.
  */
-.img-right, .media > .object-right {
+.img-right, .media .media-object-right,
+.media-content .media-object-right {
   margin-left: 1.618em; }
 
-.img-left, .media > .object {
+.img-left, .media .media-object,
+.media-content .media-object {
   margin-right: 1.618em; }
 
 .img-center, .img-none img {
@@ -900,9 +931,6 @@ dl {
 /* A little style maestro! */
 ul {
   list-style-type: circle; }
-
-ol {
-  list-style-type: lower-roman; }
 
 /* We don't need vertical space in nested lists, but we do need to add
 * the default indent we removed above! */
@@ -1022,11 +1050,18 @@ td {
   .article p + p {
     text-indent: 1em; }
 
+/* Typically used in the first paragraph of an article, for added awesome. */
+.intro {
+  font-size: 1.3125em;
+  line-height: 1.23276;
+  margin-top: 0;
+  margin-bottom: 1.23276em; }
+
 /* BLOCK QUOTES */
 /* Default margin indent is zeroed out and padded to allow styling of element. */
 blockquote {
   margin-left: 0;
-  padding: 1.618em 2.427em; }
+  padding: 0.809em 2.427em; }
   blockquote:before, blockquote:after {
     content: '';
     content: none; }
@@ -1080,37 +1115,31 @@ abbr {
 /* ==========================================================================
     BUTTONS
    ========================================================================== */
-/*
- * Default button styles.
- *
- * Using a class attribute selector ensures that any object containing the btn
- * class will match this rule. This means that, ulike Bootstrap for example,
- * you don't need class="btn btn-danger" to creat a danger button, you can just
- * use class="btn-danger" instead.
- *
- * This works because the default colour sets also use the same type of class
- * attribute selector, so [class*="-danger"] applies to buttons, labels, badges
- * or anything else you suffixed that way, e.g., class="figure-danger".
- */
-[class*="btn"] {
+.btn, .banner-row .download,
+[class*="btn-"] {
   background-color: #f0f0f0;
+  border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
   display: inline-block;
   font-size: 100%;
   font-family: "Lato", sans-serif;
+  font-weight: 400;
   line-height: 3;
+  margin-right: 0.4045em;
   padding: 0 1em;
   vertical-align: middle;
   white-space: nowrap; }
-  [class*="btn"], [class*="btn"]:hover {
+  .btn, .banner-row .download, .btn:hover, .banner-row .download:hover,
+  [class*="btn-"],
+  [class*="btn-"]:hover {
     text-decoration: none; }
-  [class*="btn"]:active, [class*="btn"]:focus {
+  .btn:active, .banner-row .download:active, .btn:focus, .banner-row .download:focus,
+  [class*="btn-"]:active,
+  [class*="btn-"]:focus {
     outline: none; }
 
-/*
- * BUTTON SIZING
- */
+/* BUTTON SIZING */
 .btn-small {
   line-height: 2;
   padding: 0 0.5em; }
@@ -1127,7 +1156,7 @@ abbr {
     LABELS
    ========================================================================== */
 [class*="label"] {
-  padding: 0.125em 0.25em;
+  padding: .125em .25em;
   text-align: center;
   background-color: #f0f0f0;
   border-radius: 3px; }
@@ -1145,14 +1174,20 @@ abbr {
  *
  * To reverse this pattern, simply use .media-object-right.
  */
-.media > .object-right {
+.media .media-content,
+.media-content .media-content {
+  overflow: hidden; }
+  .media .media-content:last-child,
+  .media-content .media-content:last-child {
+    margin-bottom: 0; }
+.media .media-object-right,
+.media-content .media-object-right {
   margin-right: 0; }
 
 /* ==========================================================================
     JOOMLA MODULES
    ========================================================================== */
 .module {
-  /* Make alll modules capable of being gridded! */
   /* Give modules some breating space. */
   margin-bottom: 1.618em;
   /* But remove it from the last one. */
@@ -1206,16 +1241,14 @@ abbr {
 /* ==========================================================================
     WELLS
    ========================================================================== */
-.well, .below-row .module .module-inner {
+.well {
   display: inline-block;
   padding: 1.618em; }
 
 /* ==========================================================================
     CONTENT WRAPPER
    ========================================================================== */
-[class*="-row"] > section,
-[class*="-row"] > header,
-[class*="-row"] > footer {
+.wrapper {
   margin: 0 auto;
   max-width: 45em; }
 
@@ -1256,7 +1289,7 @@ abbr {
 /* ==========================================================================
     GRID
    ========================================================================== */
-.grid-item, .logo, .below-row .module, [role="navigation"] {
+.grid-item, .logo, .above-row .module, .below-row .module, [role="navigation"], .social, .copyright {
   display: inline-block;
   margin-right: -.25em;
   width: 100%;
@@ -1438,14 +1471,14 @@ abbr {
     width: 100%; }
 
   /* Halves */
-  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths {
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths, .below-row .module {
     width: 50%; }
 
   /* Thirds */
-  .lap-one-third, .lap-two-sixths, .lap-four-twelfths, .below-row .module {
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths, .above-row .module, .copyright {
     width: 33.333%; }
 
-  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths {
+  .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths, .social {
     width: 66.666%; }
 
   /* Quarters */
@@ -1523,7 +1556,7 @@ abbr {
     width: 50%; }
 
   /* Thirds */
-  .portable-one-third, .portable-two-sixths, .portable-four-twelfths {
+  .portable-one-third, .portable-two-sixths, .portable-four-twelfths, .below-row .module {
     width: 33.333%; }
 
   .portable-two-thirds, .portable-four-sixths, .portable-eight-twelfths {
@@ -1763,15 +1796,6 @@ abbr {
 	Created: 	April 2013
    ========================================================================== */
 /* ==========================================================================
-    HEADINGS
-   ========================================================================== */
-h5,
-.h5,
-h6,
-.h6 {
-  font-weight: 400; }
-
-/* ==========================================================================
    	LINKS
    ========================================================================== */
 /* Back to top link. */
@@ -1782,14 +1806,6 @@ a.to-top {
 /* ==========================================================================
     TYPOGRAPHY
    ========================================================================== */
-/* PARAGRAPHS */
-/* First paragraph of an article, bigger for added awesome. */
-.article p:first-of-type {
-  font-size: 1.3125em;
-  line-height: 1.23276;
-  margin-top: 0;
-  margin-bottom: 1.23276em; }
-
 /* BLOCK QUOTES */
 /* Borders are nice, sometimes. */
 blockquote {
@@ -1880,7 +1896,7 @@ you can use the generic selector below, but it's slower:
 /*
  * Let's add some template-specific style to these babies!
  */
-.btn {
+.btn, .banner-row .download {
   font-weight: 400; }
 
 /* ==========================================================================
@@ -1889,7 +1905,8 @@ you can use the generic selector below, but it's slower:
 .banner-row {
   background: url(../images/tundra.jpg) center center;
   background-size: cover;
-  padding: 3.236em 1.618em; }
+  padding: 3.236em 1.618em;
+  /* The download button */ }
   .banner-row h1,
   .banner-row h2 {
     color: #fff; }
@@ -1923,12 +1940,40 @@ of adding icon classes in our markup. It's more awesome. */
     vertical-align: middle; } }
 
 /* ==========================================================================
-    JOOMLA MODULES
+    ABOVE-ROW MODULES
    ========================================================================== */
-/* The below-row modules */
-@media only screen and (min-width: 45em) {
+/* Make each module a grid item */
+.above-row {
+  border-bottom: 1px solid #eeeeee;
+  /* Offset the content container as we're padding the grid items */
+  /* Make each module a grid item */ }
+  @media only screen and (min-width: 45em) {
+    .above-row .content {
+      margin-left: -1.618em; } }
+  .above-row .module {
+    /* And give it a width on larger screens */ }
+    @media only screen and (min-width: 45em) {
+      .above-row .module {
+        margin-bottom: 0;
+        padding-left: 1.618em; } }
+
+/* ==========================================================================
+    ABOVE-ROW MODULES
+   ========================================================================== */
+/* Make each module a grid item */
+.below-row {
+  border-top: 1px solid #eeeeee;
+  /* Offset the content container as we're padding the grid items */
+  /* Make each module a grid item */ }
+  @media only screen and (min-width: 45em) {
+    .below-row .content {
+      margin-left: -1.618em; } }
   .below-row .module {
-    padding-right: 1.618em; } }
+    /* And give it a width on larger screens */ }
+    @media only screen and (min-width: 45em) {
+      .below-row .module {
+        margin-bottom: 0;
+        padding-left: 1.618em; } }
 
 /* ==========================================================================
     HEADER
@@ -1945,6 +1990,7 @@ of adding icon classes in our markup. It's more awesome. */
    ========================================================================== */
 /* MAIN NAVIGATION */
 [role="navigation"] {
+  font-variant: small-caps;
   font-weight: 400; }
   [role="navigation"] ul {
     margin-bottom: 0; }
@@ -1968,22 +2014,27 @@ of adding icon classes in our markup. It's more awesome. */
   text-align: center;
   color: #fff; }
 
+/* social icons */
+@media only screen and (min-width: 45em) {
+  .social {
+    margin-bottom: 0;
+    text-align: left; } }
+
+/* social icons */
+.copyright {
+  font-weight: 400; }
+  @media only screen and (min-width: 45em) {
+    .copyright {
+      text-align: right; } }
+
 /* ==========================================================================
 	ROW STYLES
    ========================================================================== */
-/* Extra padding to the main-row, in case breadcrumb-row isn't there. *
-.breadcrumb-row {
-	padding-bottom: 0;
-}
-.main-row {
-	padding-top: $double-spacing-unit;
-}
-*/
 /* Give selected content rows some breathing space */
 @media only screen and (min-width: 62em) {
-  .above-row,
-  .main-row {
-    padding: 3.236em 1.618em; } }
+  .above-row .content,
+  .main-row .content {
+    padding: 1.618em 0; } }
 /* ==========================================================================
     ARTICLE ACTIONS
    ========================================================================== */
@@ -2009,6 +2060,6 @@ of adding icon classes in our markup. It's more awesome. */
 /* ==========================================================================
     WELLS
    ========================================================================== */
-.well, .below-row .module .module-inner {
+.well {
   background: #f0f0f0;
   border: 1px solid #eeeeee; }
