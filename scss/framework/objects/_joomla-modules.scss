@@ -6,9 +6,6 @@
 
 	.module {
 
-		/* Make alll modules capable of being gridded! */
-		@extend grid-item;
-
 		/* Give modules some breating space. */
 		margin-bottom: $single-spacing-unit;
 
