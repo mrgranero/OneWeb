@@ -27,12 +27,17 @@
     }
 }
 
+/* Typically used in the first paragraph of an article, for added awesome. */
+.intro {
+    @include font-size($h4-size);
+}
+
 /* BLOCK QUOTES */
 
 /* Default margin indent is zeroed out and padded to allow styling of element. */
 blockquote {
     margin-left: 0;
-    padding: $single-spacing-unit $single-spacing-unit*1.5;
+    padding: $half-spacing-unit $single-spacing-unit*1.5;
 
     &:before,
     &:after {
