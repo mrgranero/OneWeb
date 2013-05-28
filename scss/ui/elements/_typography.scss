@@ -3,12 +3,6 @@
     TYPOGRAPHY
    ========================================================================== */
 
-/* PARAGRAPHS */
-/* First paragraph of an article, bigger for added awesome. */
-.article p:first-of-type {
-    @include font-size($h4-size);
-}
-
 /* BLOCK QUOTES */
 /* Borders are nice, sometimes. */
 blockquote {
