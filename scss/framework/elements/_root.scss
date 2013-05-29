@@ -12,7 +12,7 @@
     &,
     &:before,
     &:after {
-        @include vendor(box-sizing, border-box);
+        @include box-sizing;
     }
 }
 
@@ -32,7 +32,7 @@ html {
 
 /* Style the body element styles. */
 body {
-	@include vendor(hyphens, auto);
+	@include hyphens;
     background-color: $body-background;
 }
 

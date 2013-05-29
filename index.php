@@ -44,9 +44,9 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
         <?php if($this->countModules('banner')) : ?>
             <div class="banner-row">
                 <div class="wrapper">
-                    <div class="content">
+                    <section class="content">
                         <jdoc:include type="modules" name="banner" style="gangnam" />
-                    </div>
+                    </section>
                 </div>
             </div>
         <?php endif; ?>
@@ -54,9 +54,9 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
         <?php if($this->countModules('breadcrumbs')) : ?>
             <div class="breadcrumb-row">
                 <div class="wrapper">
-                   <div class="content">
+                   <section class="content">
                        <jdoc:include type="modules" name="breadcrumbs" style="gangnam" />
-                    </div>
+                    </section>
                 </div>
             </div>
         <?php endif; ?>
@@ -64,9 +64,9 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
         <?php if($this->countModules('above')) : ?>
             <div class="above-row">
                 <div class="wrapper">
-                    <div class="content">
+                    <section class="content">
                        <jdoc:include type="modules" name="above" style="gangnam" />
-                    </div>
+                    </section>
                 </div>
             </div>
         <?php endif; ?>
@@ -79,7 +79,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
                     <jdoc:include type="component" />
                 </main>
                 <?php if($this->countModules('complementary')) : ?>
-                <div role="complementary">
+                <div role="complementary" class="content">
                     <jdoc:include type="modules" name="complementary" style="gangnam" />
                 </div>
                 <?php endif; ?>
@@ -90,9 +90,9 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
         <?php if($this->countModules('below')) : ?>
             <div class="below-row">
                 <div class="wrapper">
-                    <div class="content">
-                    <jdoc:include type="modules" name="below" style="gangnam" />
-                    </div>
+                    <section class="content">
+                        <jdoc:include type="modules" name="below" style="gangnam" />
+                    </section>
                 </div>
             </div>
         <?php endif; ?>
@@ -116,7 +116,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/logic.php';
 
         <div class="credit-row">
             <div class="wrapper">
-                <footer>
+                <footer class="content">
                     <?php if ($social > 0) : ?>
                         <ul class="social">
                             <?php if ($twitterLink != "") : ?>

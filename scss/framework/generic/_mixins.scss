@@ -3,27 +3,24 @@
     MIXINS
    ========================================================================== */
 
+/* Set boxsizing, defaults to border-box. */
+@mixin box-sizing($boxsize: border-box) {
+    -webkit-box-sizing: $boxsize;
+    -moz-box-sizing: $boxsize;
+    -ms-box-sizing: $boxsize;
+    box-sizing: $boxsize;
+}
+
 /* Set an appropriate line-height for elements when setting font-size. */
 @mixin font-size($font-size) {
     font-size: $font-size;
     line-height: ceil($font-size / $root-line-height) * ($root-line-height / $font-size);
     margin-top: 0;
     margin-bottom: ($root-line-height / $font-size) *1em +em;
-
-}
-
-/* Vendor-prefix any CSS property in one go. */
-@mixin vendor($property, $value...) {
-    -webkit-#{$property}: $value;
-       -moz-#{$property}: $value;
-        -ms-#{$property}: $value;
-         -o-#{$property}: $value;
-            #{$property}: $value;
 }
 
 /* The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack. */
 @mixin clearfix {
-
     &:before,
     &:after{
         content:"";
@@ -34,16 +31,29 @@
     }
 }
 
-/* Hide elements visually, but leave available for screenreaders: h5bp.com/v */
-@mixin visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+/* Hyphenate text */
+@mixin hyphens() {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Basic transitions. */
+@mixin transition($transition: all .3s ease) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+/* Basic coloured box-shadows. */
+@mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.25)) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
 }
 
 /* Basic horizontal gradients. */

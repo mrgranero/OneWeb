@@ -14,7 +14,7 @@ function modChrome_gangnam($module, &$params, &$attribs)
 {
 	$headerLevel = isset($attribs['headerLevel']) ? (int) $attribs['headerLevel'] : 3;
     if (!empty ($module->content)) : ?>
-    <section class="module<?php echo $params->get('moduleclass_sfx'); ?> module-<?php echo $module->id; ?>">
+    <div class="module<?php echo $params->get('moduleclass_sfx'); ?> module-<?php echo $module->id; ?>">
 		<div class="module-inner">
             <?php if ($module->showtitle) : ?>
             <header>
@@ -23,6 +23,6 @@ function modChrome_gangnam($module, &$params, &$attribs)
             <?php endif; ?>
             <?php echo $module->content; ?>
         </div>
-    </section>
+    </div>
 	<?php endif;
 }

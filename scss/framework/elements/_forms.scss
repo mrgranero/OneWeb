@@ -9,7 +9,7 @@ form {
     input,
     select,
     textarea {
-        @include vendor(transition, all .3s);
+        @include transition;
     }
 
     ul {
@@ -21,7 +21,7 @@ form {
 /* Remove default fieldset styles. */
 fieldset {
     border: 1px solid $brand-border;
-    border-radius: $brand-round;
+    border-radius: $brand-radius;
     padding: $single-spacing-unit;
 }
 
@@ -48,7 +48,7 @@ textarea {
     width: 100%;
     border:1px solid $brand-border;
     padding: $half-spacing-unit*.5;
-    @include vendor(border-radius, $brand-round);
+    border-radius: $brand-radius;
 
     &:focus {
         border: 1px solid darken($brand-border, 10%);

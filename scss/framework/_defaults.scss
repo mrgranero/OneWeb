@@ -69,7 +69,7 @@ $link-color: 			$brand-color;
 $link-hover-color: 		darken($brand-color, 10%);
 
 /* The default size of rounded corners. */
-$brand-round:           3px!default;
+$brand-radius:          3px!default;
 
 /* UI elements colours, used in badges, buttons, labels, etc. */
 $brand-danger:          #d9534f;

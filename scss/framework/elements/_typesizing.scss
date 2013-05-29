@@ -6,6 +6,9 @@
 /*
  * Classes for super-sizing type without the semantics of h tags. Useful in
  * page banners and the like.
+ *
+ * Taken from Inuit.css' approach:
+ * https://github.com/csswizardry/inuit.css/blob/master/base/_headings.scss
  */
 .giga {
     @include font-size($giga-size);
@@ -15,14 +18,6 @@
 }
 .kilo {
     @include font-size($kilo-size);
-}
-
-/*
- * Makes introductory text, like the first paragraph of an article, a bit
- * bigger for added awesome.
- */
-.intro {
-    @include font-size($h3-size);
 }
 
 /*

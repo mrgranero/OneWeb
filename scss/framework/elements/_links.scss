@@ -1,9 +1,10 @@
 
 /* ==========================================================================
-   	LINKS
+    LINKS
    ========================================================================== */
 
 a {
+	@include transition;
     color: $link-color;
     text-decoration: none;
 
@@ -11,8 +12,6 @@ a {
     &:focus {
 	    color: $link-hover-color;
 	}
-
-	@include vendor(transition, all .2s linear);
 }
 
 /* Back to top link. */
