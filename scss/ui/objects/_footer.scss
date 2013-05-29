@@ -20,7 +20,7 @@
 
 		/* And give it a width on larger screens */
 		@include media-query(lap) {
-			@extend .lap-one-half;
+			@extend .lap-one-third;
 			margin-bottom: 0;
 			padding-left: $double-spacing-unit;
 		}
